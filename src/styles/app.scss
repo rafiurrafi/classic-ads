@@ -1,0 +1,169 @@
+/*========================================
+            COMMON STYLE START
+=========================================*/
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap");
+:root {
+  --red: #ff3838;
+  --gray: #777777;
+  --blue: #1494a9;
+  --white: #ffffff;
+  --chalk: #f5f5f5;
+  --green: #11b76b;
+  --purple: #b12fad;
+  --orange: #e86121;
+  --yellow: #ffab10;
+  --text: #555555;
+  --dark: #0d0633;
+  --border: #e8e8e8;
+  --heading: #232d3b;
+  --primary: #0044bb;
+  --primary-light: #75a7ff;
+  --primary-hover: #0022aa;
+  --view: #8edb04;
+  --click: #01cbd5;
+  --rating: #e8ce00;
+  --sale: #dc3545;
+  --rent: #03a70c;
+  --booking: #7209af;
+  --facebook: #3b5998;
+  --linkedin: #0e76a8;
+  --twitter: #00acee;
+  --primary-bshadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
+  --primary-tshadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: 0px;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+span,
+label {
+  margin-bottom: 0px;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Heebo", sans-serif;
+  line-height: 26px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading);
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 46px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 15px;
+  color: var(--gray);
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.center-50 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.center-20 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+  .content-reverse {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+/*========================================
+            COMMON STYLE END
+=========================================*/
