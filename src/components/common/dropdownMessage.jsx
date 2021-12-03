@@ -1,19 +1,18 @@
 import React from "react";
 import $ from "jquery";
 
+$(".header-widget").on("click", function () {
+  $(this).next(".dropdown-card").slideToggle();
+
+  var dropdownCard = $(this).next(".dropdown-card");
+  if ($(".dropdown-card:visible")) {
+    $(".dropdown-card").hide();
+    dropdownCard.show();
+  } else if ($(".dropdown-card:hidden")) {
+    dropdownCard.show();
+  }
+});
 const DropdownMessage = (props) => {
-  $(".header-widget").on("click", function () {
-    $(this).next(".dropdown-card").slideToggle();
-
-    var dropdownCard = $(this).next(".dropdown-card");
-    if ($(".dropdown-card:visible")) {
-      $(".dropdown-card").hide();
-      dropdownCard.show();
-    } else if ($(".dropdown-card:hidden")) {
-      dropdownCard.show();
-    }
-  });
-
   return (
     <li class="header-item">
       <button type="button" class="header-widget">

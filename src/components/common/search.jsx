@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import $ from "jquery";
 const Search = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+    $(".header-option").slideToggle("slow");
+  };
   return (
     <form class="header-form">
-      <div class="header-search">
+      <div class={`header-search ${isOpen && "active"}`}>
         <button type="submit" title="Search Submit ">
           <i class="fas fa-search"></i>
         </button>
         <input type="text" placeholder="Search, Whatever you needs..." />
-        <button type="button" title="Search Option" class="option-btn">
+        <button
+          type="button"
+          title="Search Option"
+          class="option-btn"
+          onClick={handleClick}
+        >
           <i class="fas fa-sliders-h"></i>
         </button>
       </div>

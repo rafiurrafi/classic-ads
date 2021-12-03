@@ -28,7 +28,7 @@ const DropdownNotification = (props) => {
         </div>
         <ul class="notify-list">
           <li class="notify-item active">
-            <a href="#" class="notify-link">
+            <a href="#!" class="notify-link">
               <div class="notify-img">
                 <img src="images/avatar/01.jpg" alt="avatar" />
               </div>
@@ -42,7 +42,7 @@ const DropdownNotification = (props) => {
             </a>
           </li>
           <li class="notify-item">
-            <a href="#" class="notify-link">
+            <a href="#!" class="notify-link">
               <div class="notify-img">
                 <img src="images/avatar/02.jpg" alt="avatar" />
               </div>
@@ -56,7 +56,7 @@ const DropdownNotification = (props) => {
             </a>
           </li>
           <li class="notify-item">
-            <a href="#" class="notify-link">
+            <a href="#!" class="notify-link">
               <div class="notify-img">
                 <img src="images/avatar/03.jpg" alt="avatar" />
               </div>
@@ -70,7 +70,7 @@ const DropdownNotification = (props) => {
             </a>
           </li>
           <li class="notify-item">
-            <a href="#" class="notify-link">
+            <a href="#!" class="notify-link">
               <div class="notify-img">
                 <img src="images/avatar/02.jpg" alt="avatar" />
               </div>
@@ -84,7 +84,7 @@ const DropdownNotification = (props) => {
             </a>
           </li>
           <li class="notify-item">
-            <a href="#" class="notify-link">
+            <a href="#!" class="notify-link">
               <div class="notify-img">
                 <img src="images/avatar/04.jpg" alt="avatar" />
               </div>
@@ -98,7 +98,7 @@ const DropdownNotification = (props) => {
             </a>
           </li>
           <li class="notify-item">
-            <a href="#" class="notify-link">
+            <a href="#!" class="notify-link">
               <div class="notify-img">
                 <img src="images/avatar/01.jpg" alt="avatar" />
               </div>
