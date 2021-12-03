@@ -5,6 +5,7 @@ import "./styles/app.scss";
 import $ from "jquery";
 import { useEffect } from "react";
 import MobileNav from "./components/common/mobileNav";
+import Banner from "./components/banner";
 
 function App(props) {
   const [isOpenAside, setIsOpenAside] = useToggle(false);
@@ -23,6 +24,7 @@ function App(props) {
       <Header onOpenAside={setIsOpenAside} />
       <SidebarProfile isOpenAside={isOpenAside} onOpenAside={setIsOpenAside} />
       <MobileNav />
+      <Banner />
     </div>
   );
 }
