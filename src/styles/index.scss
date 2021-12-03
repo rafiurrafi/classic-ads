@@ -2,15 +2,21 @@
             BANNER PART STYLE
 ======================================*/
 .banner-part {
-  background: url(../../images/bg/01.jpg);
+  background: url(../images/bg/01.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 95px 0px 178px;
+  //   padding: 95px 0px 178px;
+  height: 70vh;
   position: relative;
   z-index: 1;
 }
-
+.banner-part .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
 .banner-part::before {
   position: absolute;
   content: "";
@@ -214,7 +220,7 @@
   left: 0px;
   width: 100%;
   height: 100%;
-  background: url(../../images/bg/02.png);
+  background: url(../images/bg/02.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
