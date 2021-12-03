@@ -1,22 +1,29 @@
 import React from "react";
 import Search from "./common/search";
+import logo from "../images/logo.png";
+import user from "../images/user.png";
 import "../styles/header.scss";
 import "../styles/dropdown-cart.scss";
 import DropdownMessage from "./common/dropdownMessage";
-function Header() {
+function Header(props) {
+  const { onOpenAside } = props;
   return (
     <header class="header-part">
       <div class="container">
         <div class="header-content">
           <div class="header-left">
-            <button type="button" class="header-widget sidebar-btn">
+            <button
+              type="button"
+              class="header-widget sidebar-btn"
+              onClick={onOpenAside}
+            >
               <i class="fas fa-align-left"></i>
             </button>
             <a href="index.html" class="header-logo">
-              <img src="images/logo.png" alt="logo" />
+              <img src={logo} alt="logo" />
             </a>
             <a href="user-form.html" class="header-widget header-user">
-              <img src="images/user.png" alt="user" />
+              <img src={user} alt="user" />
               <span>join me</span>
             </a>
             <button type="button" class="header-widget search-btn">
