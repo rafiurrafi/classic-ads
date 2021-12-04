@@ -51,14 +51,14 @@ const Recommended = () => {
                       </ul>
                     </div>
                   </div>
-                  <div class="col-md-7 col-lg-8">
+                  <div class="col-md-7 col-lg-8 product-content-container">
                     <div class="product-content">
                       <ol class="breadcrumb product-category">
                         <li>
                           <i class="fas fa-tags"></i>
                         </li>
                         <li class="breadcrumb-item">
-                          <a href="#">stationary</a>
+                          <a href="#!">stationary</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
                           books

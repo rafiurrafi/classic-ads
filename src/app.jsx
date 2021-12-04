@@ -9,6 +9,7 @@ import MobileNav from "./components/common/mobileNav";
 import Banner from "./components/banner";
 import FeatureHome from "./components/featureHome";
 import Recommended from "./components/recommendedHome";
+import TrendingHome from "./components/trendingHome";
 
 function App() {
   const [isOpenAside, setIsOpenAside] = useToggle(false);
@@ -30,6 +31,7 @@ function App() {
       <Banner />
       <FeatureHome />
       <Recommended />
+      <TrendingHome />
     </div>
   );
 }

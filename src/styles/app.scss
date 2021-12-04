@@ -1339,7 +1339,11 @@ textarea.form-control {
 .product-action .rating i {
   color: var(--rating);
 }
-
+.product-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .product-content {
   padding: 0px 15px;
 }
