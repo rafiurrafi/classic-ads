@@ -1,0 +1,18 @@
+.increment-counter {
+  margin: 80px 0;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+}
+.increment-counter .counter {
+  font-size: 40px;
+  margin: 30px 0;
+  color: var(--primary);
+}
+.increment-counter [class^="fa"] {
+}

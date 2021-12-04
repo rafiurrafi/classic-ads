@@ -10,6 +10,8 @@ import Banner from "./components/banner";
 import FeatureHome from "./components/featureHome";
 import Recommended from "./components/recommendedHome";
 import TrendingHome from "./components/trendingHome";
+import CityHome from "./components/cityHome";
+import IncrementCounter from "./components/common/incrementCounter";
 
 function App() {
   const [isOpenAside, setIsOpenAside] = useToggle(false);
@@ -32,6 +34,8 @@ function App() {
       <FeatureHome />
       <Recommended />
       <TrendingHome />
+      <CityHome />
+      <IncrementCounter />
     </div>
   );
 }

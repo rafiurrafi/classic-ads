@@ -1708,6 +1708,9 @@ textarea.form-control {
   border-radius: 8px;
   height: 230px;
   width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .city-card:hover .city-content {
