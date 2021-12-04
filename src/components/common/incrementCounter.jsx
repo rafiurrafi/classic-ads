@@ -9,21 +9,21 @@ const IncrementCounter = (props) => {
       <div className="container">
         <div className="row">
           <div className="col">
-            <i class="fas fa-user fa-3x"></i>
+            <i className="fas fa-user fa-3x"></i>
             <div className="counter" data-target="929238">
               929238
             </div>
             <span>Registered Users</span>
           </div>
           <div className="col">
-            <i class="fab fa-twitter fa-3x"></i>
+            <i className="fab fa-twitter fa-3x"></i>
             <div className="counter" data-target="242789">
               242789
             </div>
             <span>Community Ads</span>
           </div>
           <div className="col">
-            <i class="fab fa-angellist fa-3x"></i>
+            <i className="fab fa-angellist fa-3x"></i>
             <div className="counter" data-target="242789">
               242789
             </div>

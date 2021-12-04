@@ -1,9 +1,9 @@
 import React from "react";
 const Banner = (props) => {
   return (
-    <section class="banner-part">
-      <div class="container">
-        <div class="banner-content">
+    <section className="banner-part">
+      <div className="container">
+        <div className="banner-content">
           <h1>You can #Buy, #Rent, #Booking anything from here.</h1>
           <p>
             Buy and sell everything from used cars to mobile phones and

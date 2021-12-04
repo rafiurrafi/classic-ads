@@ -2,11 +2,11 @@ import React from "react";
 import { products } from "../services/product";
 const Recommended = () => {
   return (
-    <section class="section recomend-part">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-center-heading">
+    <section className="section recomend-part">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="section-center-heading">
               <h2>
                 Our Featured <span>Ads</span>
               </h2>
@@ -18,77 +18,80 @@ const Recommended = () => {
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="product-card">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="product-card">
               {products.map((product) => (
                 <div className="row mb-5 product-card-inner" key={product._id}>
-                  <div class="col-md-5 col-lg-4">
-                    <div class="product-media">
-                      <div class="product-img">
+                  <div className="col-md-5 col-lg-4">
+                    <div className="product-media">
+                      <div className="product-img">
                         <img src={product.img} alt="product" />
                       </div>
-                      <div class="cross-vertical-badge product-badge">
-                        <i class="fas fa-clipboard-check"></i>
+                      <div className="cross-vertical-badge product-badge">
+                        <i className="fas fa-clipboard-check"></i>
                         <span>recommend</span>
                       </div>
-                      <div class="product-type">
-                        <span class="flat-badge sale">sale</span>
+                      <div className="product-type">
+                        <span className="flat-badge sale">sale</span>
                       </div>
-                      <ul class="product-action">
-                        <li class="view">
-                          <i class="fas fa-eye"></i>
+                      <ul className="product-action">
+                        <li className="view">
+                          <i className="fas fa-eye"></i>
                           <span>264</span>
                         </li>
-                        <li class="click">
-                          <i class="fas fa-mouse"></i>
+                        <li className="click">
+                          <i className="fas fa-mouse"></i>
                           <span>134</span>
                         </li>
-                        <li class="rating">
-                          <i class="fas fa-star"></i>
+                        <li className="rating">
+                          <i className="fas fa-star"></i>
                           <span>4.5/7</span>
                         </li>
                       </ul>
                     </div>
                   </div>
-                  <div class="col-md-7 col-lg-8 product-content-container">
-                    <div class="product-content">
-                      <ol class="breadcrumb product-category">
+                  <div className="col-md-7 col-lg-8 product-content-container">
+                    <div className="product-content">
+                      <ol className="breadcrumb product-category">
                         <li>
-                          <i class="fas fa-tags"></i>
+                          <i className="fas fa-tags"></i>
                         </li>
-                        <li class="breadcrumb-item">
+                        <li className="breadcrumb-item">
                           <a href="#!">stationary</a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">
+                        <li
+                          className="breadcrumb-item active"
+                          aria-current="page"
+                        >
                           books
                         </li>
                       </ol>
-                      <h5 class="product-title">
+                      <h5 className="product-title">
                         <a href="ad-details-left.html">
                           Lorem ipsum dolor sit amet consect adipisicing elit
                         </a>
                       </h5>
-                      <div class="product-meta">
+                      <div className="product-meta">
                         <span>
-                          <i class="fas fa-map-marker-alt"></i>Uttara, Dhaka
+                          <i className="fas fa-map-marker-alt"></i>Uttara, Dhaka
                         </span>
                         <span>
-                          <i class="fas fa-clock"></i>30 min ago
+                          <i className="fas fa-clock"></i>30 min ago
                         </span>
                       </div>
-                      <div class="product-info">
-                        <h5 class="product-price">
+                      <div className="product-info">
+                        <h5 className="product-price">
                           $470<span>/fixed</span>
                         </h5>
-                        <div class="product-btn">
+                        <div className="product-btn">
                           <a href="compare.html" title="Compare">
-                            <i class="fas fa-compress"></i>
+                            <i className="fas fa-compress"></i>
                           </a>
                           <button
                             type="button"
                             title="Wishlist"
-                            class="far fa-heart"
+                            className="far fa-heart"
                           ></button>
                         </div>
                       </div>
@@ -99,11 +102,11 @@ const Recommended = () => {
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="center-50">
-              <a href="ad-list-column3.html" class="btn btn-inline">
-                <i class="fas fa-eye"></i>
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="center-50">
+              <a href="ad-list-column3.html" className="btn btn-inline">
+                <i className="fas fa-eye"></i>
                 <span>view all recommend</span>
               </a>
             </div>

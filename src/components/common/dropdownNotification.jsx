@@ -16,98 +16,98 @@ const DropdownNotification = (props) => {
     }
   });
   return (
-    <li class="header-item">
-      <button type="button" class="header-widget">
-        <i class="fas fa-bell"></i>
+    <li className="header-item">
+      <button type="button" className="header-widget">
+        <i className="fas fa-bell"></i>
         <sup>0</sup>
       </button>
-      <div class="dropdown-card">
-        <div class="dropdown-header">
+      <div className="dropdown-card">
+        <div className="dropdown-header">
           <h5>Notification (1)</h5>
           <a href="notification.html">view all</a>
         </div>
-        <ul class="notify-list">
-          <li class="notify-item active">
-            <a href="#!" class="notify-link">
-              <div class="notify-img">
+        <ul className="notify-list">
+          <li className="notify-item active">
+            <a href="#!" className="notify-link">
+              <div className="notify-img">
                 <img src="images/avatar/01.jpg" alt="avatar" />
               </div>
-              <div class="notify-content">
-                <p class="notify-text">
+              <div className="notify-content">
+                <p className="notify-text">
                   <span>miron mahmud</span> has added the advertisement post of
                   your <span>booking</span> to his wishlist.
                 </p>
-                <span class="notify-time">just now</span>
+                <span className="notify-time">just now</span>
               </div>
             </a>
           </li>
-          <li class="notify-item">
-            <a href="#!" class="notify-link">
-              <div class="notify-img">
+          <li className="notify-item">
+            <a href="#!" className="notify-link">
+              <div className="notify-img">
                 <img src="images/avatar/02.jpg" alt="avatar" />
               </div>
-              <div class="notify-content">
-                <p class="notify-text">
+              <div className="notify-content">
+                <p className="notify-text">
                   <span>tahmina bonny</span> gave you a <span>comment</span> and
                   5 star <span>review.</span>
                 </p>
-                <span class="notify-time">2 hours ago</span>
+                <span className="notify-time">2 hours ago</span>
               </div>
             </a>
           </li>
-          <li class="notify-item">
-            <a href="#!" class="notify-link">
-              <div class="notify-img">
+          <li className="notify-item">
+            <a href="#!" className="notify-link">
+              <div className="notify-img">
                 <img src="images/avatar/03.jpg" alt="avatar" />
               </div>
-              <div class="notify-content">
-                <p class="notify-text">
+              <div className="notify-content">
+                <p className="notify-text">
                   <span>shipu ahmed</span> and <span>4 other</span> have seen
                   your contact number
                 </p>
-                <span class="notify-time">3 minutes ago</span>
+                <span className="notify-time">3 minutes ago</span>
               </div>
             </a>
           </li>
-          <li class="notify-item">
-            <a href="#!" class="notify-link">
-              <div class="notify-img">
+          <li className="notify-item">
+            <a href="#!" className="notify-link">
+              <div className="notify-img">
                 <img src="images/avatar/02.jpg" alt="avatar" />
               </div>
-              <div class="notify-content">
-                <p class="notify-text">
+              <div className="notify-content">
+                <p className="notify-text">
                   <span>miron mahmud</span> has added the advertisement post of
                   your <span>booking</span> to his wishlist.
                 </p>
-                <span class="notify-time">5 days ago</span>
+                <span className="notify-time">5 days ago</span>
               </div>
             </a>
           </li>
-          <li class="notify-item">
-            <a href="#!" class="notify-link">
-              <div class="notify-img">
+          <li className="notify-item">
+            <a href="#!" className="notify-link">
+              <div className="notify-img">
                 <img src="images/avatar/04.jpg" alt="avatar" />
               </div>
-              <div class="notify-content">
-                <p class="notify-text">
+              <div className="notify-content">
+                <p className="notify-text">
                   <span>labonno khan</span> gave you a <span>comment</span> and
                   5 star <span>review.</span>
                 </p>
-                <span class="notify-time">4 months ago</span>
+                <span className="notify-time">4 months ago</span>
               </div>
             </a>
           </li>
-          <li class="notify-item">
-            <a href="#!" class="notify-link">
-              <div class="notify-img">
+          <li className="notify-item">
+            <a href="#!" className="notify-link">
+              <div className="notify-img">
                 <img src="images/avatar/01.jpg" alt="avatar" />
               </div>
-              <div class="notify-content">
-                <p class="notify-text">
+              <div className="notify-content">
+                <p className="notify-text">
                   <span>azam khan</span> and <span>4 other</span> have seen your
                   contact number
                 </p>
-                <span class="notify-time">1 years ago</span>
+                <span className="notify-time">1 years ago</span>
               </div>
             </a>
           </li>

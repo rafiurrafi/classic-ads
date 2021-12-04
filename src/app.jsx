@@ -4,7 +4,7 @@ import SidebarProfile from "./components/sidebarProfile";
 import "./styles/app.scss";
 import "./styles/index.scss";
 import $ from "jquery";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import MobileNav from "./components/common/mobileNav";
 import Banner from "./components/banner";
 import FeatureHome from "./components/featureHome";
@@ -16,6 +16,7 @@ import PostAds from "./components/postAds";
 
 function App() {
   const [isOpenAside, setIsOpenAside] = useToggle(false);
+  const [scrollY, setScrollY] = useState(0);
   useEffect(() => {
     window.addEventListener("scroll", function () {
       var scrolling = $(this).scrollTop();
@@ -26,6 +27,10 @@ function App() {
       }
     });
   }, []);
+  useEffect(() => {
+    setScrollY(window.screenTop);
+    console.log(scrollY);
+  }, [scrollY]);
   return (
     <div className="App">
       <Header onOpenAside={setIsOpenAside} />

@@ -2,11 +2,11 @@ import React from "react";
 import { cities } from "../services/cityService";
 const CityHome = () => {
   return (
-    <section class="section city-part">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-center-heading">
+    <section className="section city-part">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="section-center-heading">
               <h2>
                 Top Cities by <span>Ads</span>
               </h2>
@@ -18,15 +18,15 @@ const CityHome = () => {
             </div>
           </div>
         </div>
-        <div class="row">
+        <div className="row">
           {cities.map((city) => (
-            <div class={`col-sm-6 col-md-6 col-lg-${city.size}`}>
+            <div className={`col-sm-6 col-md-6 col-lg-${city.size}`}>
               <a
                 href="ad-list-column3.html"
-                class="city-card"
+                className="city-card"
                 style={{ backgroundImage: `url(${city.img})` }}
               >
-                <div class="city-content">
+                <div className="city-content">
                   <h4>{city.name}</h4>
                   <p>(25) ads</p>
                 </div>
@@ -34,11 +34,11 @@ const CityHome = () => {
             </div>
           ))}
         </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="center-20">
-              <a href="cities.html" class="btn btn-inline">
-                <i class="fas fa-eye"></i>
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="center-20">
+              <a href="cities.html" className="btn btn-inline">
+                <i className="fas fa-eye"></i>
                 <span>view all Cities</span>
               </a>
             </div>

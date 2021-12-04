@@ -8,132 +8,132 @@ import DropdownMessage from "./common/dropdownMessage";
 function Header(props) {
   const { onOpenAside } = props;
   return (
-    <header class="header-part">
-      <div class="container">
-        <div class="header-content">
-          <div class="header-left">
+    <header className="header-part">
+      <div className="container">
+        <div className="header-content">
+          <div className="header-left">
             <button
               type="button"
-              class="header-widget sidebar-btn"
+              className="header-widget sidebar-btn"
               onClick={onOpenAside}
             >
-              <i class="fas fa-align-left"></i>
+              <i className="fas fa-align-left"></i>
             </button>
-            <a href="index.html" class="header-logo">
+            <a href="index.html" className="header-logo">
               <img src={logo} alt="logo" />
             </a>
-            <a href="user-form.html" class="header-widget header-user">
+            <a href="user-form.html" className="header-widget header-user">
               <img src={user} alt="user" />
               <span>join me</span>
             </a>
-            <button type="button" class="header-widget search-btn">
-              <i class="fas fa-search"></i>
+            <button type="button" className="header-widget search-btn">
+              <i className="fas fa-search"></i>
             </button>
           </div>
           <Search />
-          <div class="header-right">
-            <ul class="header-list">
-              <li class="header-item">
-                <a href="bookmark.html" class="header-widget">
-                  <i class="fas fa-heart"></i>
+          <div className="header-right">
+            <ul className="header-list">
+              <li className="header-item">
+                <a href="bookmark.html" className="header-widget">
+                  <i className="fas fa-heart"></i>
                   <sup>0</sup>
                 </a>
               </li>
               <DropdownMessage />
-              <li class="header-item">
-                <button type="button" class="header-widget">
-                  <i class="fas fa-bell"></i>
+              <li className="header-item">
+                <button type="button" className="header-widget">
+                  <i className="fas fa-bell"></i>
                   <sup>0</sup>
                 </button>
-                <div class="dropdown-card">
-                  <div class="dropdown-header">
+                <div className="dropdown-card">
+                  <div className="dropdown-header">
                     <h5>Notification (1)</h5>
                     <a href="notification.html">view all</a>
                   </div>
-                  <ul class="notify-list">
-                    <li class="notify-item active">
-                      <a href="#" class="notify-link">
-                        <div class="notify-img">
+                  <ul className="notify-list">
+                    <li className="notify-item active">
+                      <a href="#" className="notify-link">
+                        <div className="notify-img">
                           <img src="images/avatar/01.jpg" alt="avatar" />
                         </div>
-                        <div class="notify-content">
-                          <p class="notify-text">
+                        <div className="notify-content">
+                          <p className="notify-text">
                             <span>miron mahmud</span> has added the
                             advertisement post of your <span>booking</span> to
                             his wishlist.
                           </p>
-                          <span class="notify-time">just now</span>
+                          <span className="notify-time">just now</span>
                         </div>
                       </a>
                     </li>
-                    <li class="notify-item">
-                      <a href="#" class="notify-link">
-                        <div class="notify-img">
+                    <li className="notify-item">
+                      <a href="#" className="notify-link">
+                        <div className="notify-img">
                           <img src="images/avatar/02.jpg" alt="avatar" />
                         </div>
-                        <div class="notify-content">
-                          <p class="notify-text">
+                        <div className="notify-content">
+                          <p className="notify-text">
                             <span>tahmina bonny</span> gave you a{" "}
                             <span>comment</span> and 5 star <span>review.</span>
                           </p>
-                          <span class="notify-time">2 hours ago</span>
+                          <span className="notify-time">2 hours ago</span>
                         </div>
                       </a>
                     </li>
-                    <li class="notify-item">
-                      <a href="#" class="notify-link">
-                        <div class="notify-img">
+                    <li className="notify-item">
+                      <a href="#" className="notify-link">
+                        <div className="notify-img">
                           <img src="images/avatar/03.jpg" alt="avatar" />
                         </div>
-                        <div class="notify-content">
-                          <p class="notify-text">
+                        <div className="notify-content">
+                          <p className="notify-text">
                             <span>shipu ahmed</span> and <span>4 other</span>{" "}
                             have seen your contact number
                           </p>
-                          <span class="notify-time">3 minutes ago</span>
+                          <span className="notify-time">3 minutes ago</span>
                         </div>
                       </a>
                     </li>
-                    <li class="notify-item">
-                      <a href="#" class="notify-link">
-                        <div class="notify-img">
+                    <li className="notify-item">
+                      <a href="#" className="notify-link">
+                        <div className="notify-img">
                           <img src="images/avatar/02.jpg" alt="avatar" />
                         </div>
-                        <div class="notify-content">
-                          <p class="notify-text">
+                        <div className="notify-content">
+                          <p className="notify-text">
                             <span>miron mahmud</span> has added the
                             advertisement post of your <span>booking</span> to
                             his wishlist.
                           </p>
-                          <span class="notify-time">5 days ago</span>
+                          <span className="notify-time">5 days ago</span>
                         </div>
                       </a>
                     </li>
-                    <li class="notify-item">
-                      <a href="#" class="notify-link">
-                        <div class="notify-img">
+                    <li className="notify-item">
+                      <a href="#" className="notify-link">
+                        <div className="notify-img">
                           <img src="images/avatar/04.jpg" alt="avatar" />
                         </div>
-                        <div class="notify-content">
-                          <p class="notify-text">
+                        <div className="notify-content">
+                          <p className="notify-text">
                             <span>labonno khan</span> gave you a{" "}
                             <span>comment</span> and 5 star <span>review.</span>
                           </p>
-                          <span class="notify-time">4 months ago</span>
+                          <span className="notify-time">4 months ago</span>
                         </div>
                       </a>
                     </li>
-                    <li class="notify-item">
-                      <a href="#" class="notify-link">
-                        <div class="notify-img">
+                    <li className="notify-item">
+                      <a href="#" className="notify-link">
+                        <div className="notify-img">
                           <img src="images/avatar/01.jpg" alt="avatar" />
                         </div>
-                        <div class="notify-content">
-                          <p class="notify-text">
+                        <div className="notify-content">
+                          <p className="notify-text">
                             <span>azam khan</span> and <span>4 other</span> have
                             seen your contact number
                           </p>
-                          <span class="notify-time">1 years ago</span>
+                          <span className="notify-time">1 years ago</span>
                         </div>
                       </a>
                     </li>
@@ -141,8 +141,8 @@ function Header(props) {
                 </div>
               </li>
             </ul>
-            <a href="ad-post.html" class="btn btn-inline post-btn">
-              <i class="fas fa-plus-circle"></i>
+            <a href="ad-post.html" className="btn btn-inline post-btn">
+              <i className="fas fa-plus-circle"></i>
               <span>post your ad</span>
             </a>
           </div>

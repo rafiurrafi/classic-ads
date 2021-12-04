@@ -14,38 +14,38 @@ $(".header-widget").on("click", function () {
 });
 const DropdownMessage = (props) => {
   return (
-    <li class="header-item">
-      <button type="button" class="header-widget">
-        <i class="fas fa-envelope"></i>
+    <li className="header-item">
+      <button type="button" className="header-widget">
+        <i className="fas fa-envelope"></i>
         <sup>0</sup>
       </button>
-      <div class="dropdown-card">
-        <div class="dropdown-header">
+      <div className="dropdown-card">
+        <div className="dropdown-header">
           <h5>message (2)</h5>
           <a href="message.html">view all</a>
         </div>
-        <ul class="message-list">
-          <li class="message-item unread">
-            <a href="message.html" class="message-link">
-              <div class="message-img active">
+        <ul className="message-list">
+          <li className="message-item unread">
+            <a href="message.html" className="message-link">
+              <div className="message-img active">
                 <img src="images/avatar/01.jpg" alt="avatar" />
               </div>
-              <div class="message-text">
+              <div className="message-text">
                 <h6>
                   {" "}
                   = miron mahmud <span>now</span>
                 </h6>
                 <p>How are you my best frien...</p>
               </div>
-              <span class="message-count">4</span>
+              <span className="message-count">4</span>
             </a>
           </li>
-          <li class="message-item">
-            <a href="message.html" class="message-link">
-              <div class="message-img active">
+          <li className="message-item">
+            <a href="message.html" className="message-link">
+              <div className="message-img active">
                 <img src="images/avatar/03.jpg" alt="avatar" />
               </div>
-              <div class="message-text">
+              <div className="message-text">
                 <h6>
                   shipu ahmed <span>3m</span>
                 </h6>
@@ -55,26 +55,26 @@ const DropdownMessage = (props) => {
               </div>
             </a>
           </li>
-          <li class="message-item unread">
-            <a href="message.html" class="message-link">
-              <div class="message-img">
+          <li className="message-item unread">
+            <a href="message.html" className="message-link">
+              <div className="message-img">
                 <img src="images/avatar/02.jpg" alt="avatar" />
               </div>
-              <div class="message-text">
+              <div className="message-text">
                 <h6>
                   tahmina bonny <span>2h</span>
                 </h6>
                 <p>How are you my best frien...</p>
               </div>
-              <span class="message-count">12</span>
+              <span className="message-count">12</span>
             </a>
           </li>
-          <li class="message-item">
-            <a href="message.html" class="message-link">
-              <div class="message-img active">
+          <li className="message-item">
+            <a href="message.html" className="message-link">
+              <div className="message-img active">
                 <img src="images/avatar/04.jpg" alt="avatar" />
               </div>
-              <div class="message-text">
+              <div className="message-text">
                 <h6>
                   nasrullah <span>5d</span>
                 </h6>
@@ -82,12 +82,12 @@ const DropdownMessage = (props) => {
               </div>
             </a>
           </li>
-          <li class="message-item">
-            <a href="message.html" class="message-link">
-              <div class="message-img">
+          <li className="message-item">
+            <a href="message.html" className="message-link">
+              <div className="message-img">
                 <img src="images/user.png" alt="avatar" />
               </div>
-              <div class="message-text">
+              <div className="message-text">
                 <h6>
                   saikul azam <span>7w</span>
                 </h6>
@@ -97,12 +97,12 @@ const DropdownMessage = (props) => {
               </div>
             </a>
           </li>
-          <li class="message-item">
-            <a href="message.html" class="message-link">
-              <div class="message-img active">
+          <li className="message-item">
+            <a href="message.html" className="message-link">
+              <div className="message-img active">
                 <img src="images/avatar/02.jpg" alt="avatar" />
               </div>
-              <div class="message-text">
+              <div className="message-text">
                 <h6>
                   munni akter <span>9m</span>
                 </h6>
@@ -110,12 +110,12 @@ const DropdownMessage = (props) => {
               </div>
             </a>
           </li>
-          <li class="message-item">
-            <a href="message.html" class="message-link">
-              <div class="message-img active">
+          <li className="message-item">
+            <a href="message.html" className="message-link">
+              <div className="message-img active">
                 <img src="images/avatar/03.jpg" alt="avatar" />
               </div>
-              <div class="message-text">
+              <div className="message-text">
                 <h6>
                   shahin alam <span>1y</span>
                 </h6>
