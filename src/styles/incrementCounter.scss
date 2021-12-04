@@ -1,5 +1,5 @@
 .increment-counter {
-  margin: 80px 0;
+  margin-top: 80px;
   height: 50vh;
   display: flex;
   align-items: center;
@@ -13,6 +13,4 @@
   font-size: 40px;
   margin: 30px 0;
   color: var(--primary);
-}
-.increment-counter [class^="fa"] {
 }
