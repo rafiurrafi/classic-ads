@@ -20,7 +20,10 @@ const CityHome = () => {
         </div>
         <div className="row">
           {cities.map((city) => (
-            <div className={`col-sm-6 col-md-6 col-lg-${city.size}`}>
+            <div
+              key={city._id}
+              className={`col-sm-6 col-md-6 col-lg-${city.size}`}
+            >
               <a
                 href="ad-list-column3.html"
                 className="city-card"

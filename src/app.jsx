@@ -13,6 +13,7 @@ import TrendingHome from "./components/trendingHome";
 import CityHome from "./components/cityHome";
 import IncrementCounter from "./components/common/incrementCounter";
 import PostAds from "./components/postAds";
+import PostHome from "./components/postHome";
 
 function App() {
   const [isOpenAside, setIsOpenAside] = useToggle(false);
@@ -43,6 +44,7 @@ function App() {
       <IncrementCounter />
       <CityHome />
       <PostAds />
+      <PostHome />
     </div>
   );
 }
