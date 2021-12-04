@@ -1,98 +1,69 @@
-import * as Ai from "react-scripts/ai";
-import * as Bi from "react-scripts/bi";
-import * as Ri from "react-scripts/ri";
-import * as Gi from "react-scripts/gi";
-import * as Fa from "react-scripts/fa";
-import * as Bs from "react-icons/bs";
+// import * as Ai from "react-scripts/ai";
+// import * as Bi from "react-scripts/bi";
+// import * as Ri from "react-scripts/ri";
+// import * as Gi from "react-scripts/gi";
+// import * as Fa from "react-scripts/fa";
+// import * as Bs from "react-icons/bs";
+
 const categories = [
   {
     _id: 1,
     name: "Mobile",
-    icon: <Bi.BiMobileAlt />,
+    icon: "images/suggest/automobile.png",
     numberOfAds: 21211,
   },
   {
     _id: 2,
     name: "Electronics",
-    icon: <Ri.RiComputerLine />,
+    icon: "images/suggest/furniture.png",
     numberOfAds: 21211,
   },
   {
     _id: 3,
     name: "Home &amp; Livings",
-    icon: <Ai.AiOutlineHome />,
+    icon: "images/suggest/properties.png",
     numberOfAds: 21211,
   },
   {
     _id: 4,
     name: "Vehicles",
-    icon: <Ai.AiFillCar />,
+    icon: "images/suggest/electronics.png",
     numberOfAds: 21211,
   },
   {
     _id: 5,
     name: "Property",
-    icon: <Ai.AiOutlinePropertySafety />,
+    icon: "images/suggest/hospitality.png",
     numberOfAds: 21211,
   },
   {
     _id: 6,
     name: "Pet & Animale",
-    icon: <Fa.FaCat />,
+    icon: "images/suggest/gadgets.png",
     numberOfAds: 21211,
   },
   {
     _id: 7,
     name: "Fashion & Beauty",
-    icon: <Bs.BsSmartwatch />,
+    icon: "images/suggest/education.png",
     numberOfAds: 21211,
   },
   {
     _id: 14,
     name: "Hobbies, Sports & Kids",
-    icon: <Bi.BiFootball />,
+    icon: "images/suggest/software.png",
     numberOfAds: 21211,
   },
   {
     _id: 8,
     name: "Industry & Business",
-    icon: <Fa.FaIndustry />,
+    icon: "images/suggest/food.png",
     numberOfAds: 21211,
   },
   {
     _id: 15,
     name: "Education",
-    icon: <Bs.BsBookHalf />,
-    numberOfAds: 21211,
-  },
-  {
-    _id: 9,
-    name: "Essentils",
-    icon: <Gi.GiMaterialsScience />,
-    numberOfAds: 21211,
-  },
-  {
-    _id: 10,
-    name: "Jobs",
-    icon: <Bs.BsFillHandbagFill />,
-    numberOfAds: 21211,
-  },
-  {
-    _id: 11,
-    name: "Service",
-    icon: <Fa.FaTools />,
-    numberOfAds: 21211,
-  },
-  {
-    _id: 12,
-    name: "Agriculture",
-    icon: <Gi.GiFoodChain />,
-    numberOfAds: 21211,
-  },
-  {
-    _id: 13,
-    name: "Overseas jobs",
-    icon: <Gi.GiCommercialAirplane />,
+    icon: "images/suggest/animals.png",
     numberOfAds: 21211,
   },
 ];

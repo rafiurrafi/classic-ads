@@ -15,10 +15,10 @@ import IncrementCounter from "./components/common/incrementCounter";
 import PostAds from "./components/postAds";
 import PostHome from "./components/postHome";
 import Footer from "./components/footer";
+import CategoryHome from "./components/common/category";
 
 function App() {
   const [isOpenAside, setIsOpenAside] = useToggle(false);
-  const [scrollY, setScrollY] = useState(0);
   useEffect(() => {
     window.addEventListener("scroll", function () {
       var scrolling = $(this).scrollTop();
@@ -29,16 +29,13 @@ function App() {
       }
     });
   }, []);
-  useEffect(() => {
-    setScrollY(window.screenTop);
-    console.log(scrollY);
-  }, [scrollY]);
   return (
     <div className="App">
       <Header onOpenAside={setIsOpenAside} />
       <SidebarProfile isOpenAside={isOpenAside} onOpenAside={setIsOpenAside} />
       <MobileNav />
       <Banner />
+      <CategoryHome />
       <FeatureHome />
       <Recommended />
       <TrendingHome />
