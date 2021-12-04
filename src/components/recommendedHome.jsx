@@ -1,33 +1,6 @@
 import React from "react";
-import product2 from "../images/product/10.jpg";
-import product3 from "../images/product/03.jpg";
-import product4 from "../images/product/09.jpg";
-import product5 from "../images/product/02.jpg";
-
+import { products } from "../services/product";
 const Recommended = () => {
-  const products = [
-    {
-      _id: 1,
-      img: "images/product/01.jpg",
-    },
-    {
-      _id: 2,
-      img: product2,
-    },
-    {
-      _id: 3,
-      img: product3,
-    },
-    {
-      _id: 4,
-      img: product4,
-    },
-    {
-      _id: 5,
-      img: product5,
-    },
-  ];
-  console.log(products);
   return (
     <section class="section recomend-part">
       <div class="container">
