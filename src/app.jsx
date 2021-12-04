@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import MobileNav from "./components/common/mobileNav";
 import Banner from "./components/banner";
 import FeatureHome from "./components/featureHome";
+import Recommended from "./components/recommendedHome";
 
 function App() {
   const [isOpenAside, setIsOpenAside] = useToggle(false);
@@ -28,6 +29,7 @@ function App() {
       <MobileNav />
       <Banner />
       <FeatureHome />
+      <Recommended />
     </div>
   );
 }
