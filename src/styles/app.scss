@@ -1187,7 +1187,9 @@ textarea.form-control {
 .dropdown-header a:hover {
   text-decoration: underline;
 }
-
+.suggest-part [class^="col"] {
+  padding: 0;
+}
 .suggest-card {
   margin: 0px 8px;
   border-radius: 8px;
