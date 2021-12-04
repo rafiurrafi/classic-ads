@@ -606,6 +606,18 @@ const TrendingHome = () => {
             </div>
           </div>
         </div>
+        {/* ===============================
+        view all add section */}
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="center-20">
+              <a href="ad-list-column3.html" class="btn btn-inline">
+                <i class="fas fa-eye"></i>
+                <span>view all ads</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

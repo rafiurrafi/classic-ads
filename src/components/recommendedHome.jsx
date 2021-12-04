@@ -8,7 +8,7 @@ const Recommended = () => {
           <div class="col-lg-12">
             <div class="section-center-heading">
               <h2>
-                Our Recommend <span>Ads</span>
+                Our Featured <span>Ads</span>
               </h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
@@ -22,7 +22,7 @@ const Recommended = () => {
           <div class="col-lg-12">
             <div class="product-card">
               {products.map((product) => (
-                <div className="row mb-5" key={product._id}>
+                <div className="row mb-5 product-card-inner" key={product._id}>
                   <div class="col-md-5 col-lg-4">
                     <div class="product-media">
                       <div class="product-img">
