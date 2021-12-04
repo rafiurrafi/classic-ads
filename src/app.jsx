@@ -14,6 +14,7 @@ import CityHome from "./components/cityHome";
 import IncrementCounter from "./components/common/incrementCounter";
 import PostAds from "./components/postAds";
 import PostHome from "./components/postHome";
+import Footer from "./components/footer";
 
 function App() {
   const [isOpenAside, setIsOpenAside] = useToggle(false);
@@ -45,6 +46,7 @@ function App() {
       <CityHome />
       <PostAds />
       <PostHome />
+      <Footer />
     </div>
   );
 }
