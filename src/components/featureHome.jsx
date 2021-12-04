@@ -1,6 +1,58 @@
 import React from "react";
-
+import product1 from "../images/product/10.jpg";
+import product2 from "../images/product/01.jpg";
+import product3 from "../images/product/08.jpg";
+import product4 from "../images/product/06.jpg";
+import $ from "jquery";
 const FeatureHome = () => {
+  React.useEffect(() => {
+    // $(".feature-slider").slick({
+    //   dots: false,
+    //   infinite: true,
+    //   speed: 1000,
+    //   autoplay: false,
+    //   arrows: true,
+    //   fade: false,
+    //   slidesToShow: 4,
+    //   slidesToScroll: 1,
+    //   prevArrow: '<i class="fas fa-long-arrow-alt-right dandik"></i>',
+    //   nextArrow: '<i class="fas fa-long-arrow-alt-left bamdik"></i>',
+    //   responsive: [
+    //     {
+    //       breakpoint: 1199,
+    //       settings: {
+    //         slidesToShow: 3,
+    //         slidesToScroll: 1,
+    //         infinite: true,
+    //         dots: true,
+    //       },
+    //     },
+    //     {
+    //       breakpoint: 991,
+    //       settings: {
+    //         slidesToShow: 2,
+    //         slidesToScroll: 1,
+    //         infinite: true,
+    //         dots: true,
+    //       },
+    //     },
+    //     {
+    //       breakpoint: 767,
+    //       settings: {
+    //         slidesToShow: 1,
+    //         slidesToScroll: 1,
+    //       },
+    //     },
+    //     {
+    //       breakpoint: 575,
+    //       settings: {
+    //         slidesToShow: 1,
+    //         slidesToScroll: 1,
+    //       },
+    //     },
+    //   ],
+    // });
+  }, []);
   return (
     <section class="section feature-part">
       <div class="container">
@@ -25,7 +77,7 @@ const FeatureHome = () => {
             <div class="feature-card-slider slider-arrow">
               <div class="feature-card">
                 <a href="#!" class="feature-img">
-                  <img src="images/product/10.jpg" alt="feature" />
+                  <img src={product2} alt="feature" />
                 </a>
                 <div class="cross-inline-badge feature-badge">
                   <span>featured</span>
@@ -64,7 +116,7 @@ const FeatureHome = () => {
               </div>
               <div class="feature-card">
                 <a href="#!" class="feature-img">
-                  <img src="images/product/01.jpg" alt="feature" />
+                  <img src={product1} alt="feature" />
                 </a>
                 <div class="cross-inline-badge feature-badge">
                   <span>featured</span>
@@ -103,7 +155,7 @@ const FeatureHome = () => {
               </div>
               <div class="feature-card">
                 <a href="#!" class="feature-img">
-                  <img src="images/product/08.jpg" alt="feature" />
+                  <img src={product3} alt="feature" />
                 </a>
                 <div class="cross-inline-badge feature-badge">
                   <span>featured</span>
@@ -142,7 +194,7 @@ const FeatureHome = () => {
               </div>
               <div class="feature-card">
                 <a href="#!" class="feature-img">
-                  <img src="images/product/06.jpg" alt="feature" />
+                  <img src={product4} alt="feature" />
                 </a>
                 <div class="cross-inline-badge feature-badge">
                   <span>featured</span>
@@ -182,16 +234,16 @@ const FeatureHome = () => {
             </div>
             <div class="feature-thumb-slider">
               <div class="feature-thumb">
-                <img src="images/product/10.jpg" alt="feature" />
+                <img src={product1} alt="feature" />
               </div>
               <div class="feature-thumb">
-                <img src="images/product/01.jpg" alt="feature" />
+                <img src={product2} alt="feature" />
               </div>
               <div class="feature-thumb">
-                <img src="images/product/08.jpg" alt="feature" />
+                <img src={product3} alt="feature" />
               </div>
               <div class="feature-thumb">
-                <img src="images/product/06.jpg" alt="feature" />
+                <img src={product4} alt="feature" />
               </div>
             </div>
           </div>
