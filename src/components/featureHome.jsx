@@ -1,58 +1,31 @@
 import React from "react";
+import Slider from "react-slick";
+
 import product1 from "../images/product/10.jpg";
 import product2 from "../images/product/01.jpg";
 import product3 from "../images/product/08.jpg";
 import product4 from "../images/product/06.jpg";
-import $ from "jquery";
+import "slick-carousel/slick/slick.css";
+
+// import $ from "jquery";
 const FeatureHome = () => {
-  React.useEffect(() => {
-    // $(".feature-slider").slick({
-    //   dots: false,
-    //   infinite: true,
-    //   speed: 1000,
-    //   autoplay: false,
-    //   arrows: true,
-    //   fade: false,
-    //   slidesToShow: 4,
-    //   slidesToScroll: 1,
-    //   prevArrow: '<i className="fas fa-long-arrow-alt-right dandik"></i>',
-    //   nextArrow: '<i className="fas fa-long-arrow-alt-left bamdik"></i>',
-    //   responsive: [
-    //     {
-    //       breakpoint: 1199,
-    //       settings: {
-    //         slidesToShow: 3,
-    //         slidesToScroll: 1,
-    //         infinite: true,
-    //         dots: true,
-    //       },
-    //     },
-    //     {
-    //       breakpoint: 991,
-    //       settings: {
-    //         slidesToShow: 2,
-    //         slidesToScroll: 1,
-    //         infinite: true,
-    //         dots: true,
-    //       },
-    //     },
-    //     {
-    //       breakpoint: 767,
-    //       settings: {
-    //         slidesToShow: 1,
-    //         slidesToScroll: 1,
-    //       },
-    //     },
-    //     {
-    //       breakpoint: 575,
-    //       settings: {
-    //         slidesToShow: 1,
-    //         slidesToScroll: 1,
-    //       },
-    //     },
-    //   ],
-    // });
-  }, []);
+  const baseUrl = "../images/product";
+  const settings = {
+    dots: true,
+    dotsClass: "slick-dots slick-thumb",
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    customPaging: function (i) {
+      return (
+        <a>
+          {/* <img src={`${baseUrl}/abstract0${i + 1}.jpg`} /> */}
+          <img src={`${baseUrl}/0${i + 1}.jpg`} />
+        </a>
+      );
+    },
+  };
   return (
     <section className="section feature-part">
       <div className="container">
@@ -74,7 +47,7 @@ const FeatureHome = () => {
             </div>
           </div>
           <div className="col-md-7 col-lg-7">
-            <div className="feature-card-slider slider-arrow">
+            <Slider {...settings}>
               <div className="feature-card">
                 <a href="#!" className="feature-img">
                   <img src={product2} alt="feature" />
@@ -231,21 +204,7 @@ const FeatureHome = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="feature-thumb-slider">
-              <div className="feature-thumb">
-                <img src={product1} alt="feature" />
-              </div>
-              <div className="feature-thumb">
-                <img src={product2} alt="feature" />
-              </div>
-              <div className="feature-thumb">
-                <img src={product3} alt="feature" />
-              </div>
-              <div className="feature-thumb">
-                <img src={product4} alt="feature" />
-              </div>
-            </div>
+            </Slider>
           </div>
         </div>
       </div>
