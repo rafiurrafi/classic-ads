@@ -1,47 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
 const PostHome = () => {
-  // React.useEffect(() => {
-  //   $(".blog-slider").slick({
-  //     dots: false,
-  //     infinite: true,
-  //     speed: 800,
-  //     autoplay: true,
-  //     arrows: true,
-  //     fade: false,
-  //     slidesToShow: 3,
-  //     slidesToScroll: 1,
-  //     prevArrow: '<i class="fas fa-long-arrow-alt-right dandik"></i>',
-  //     nextArrow: '<i class="fas fa-long-arrow-alt-left bamdik"></i>',
-  //     responsive: [
-  //       {
-  //         breakpoint: 992,
-  //         settings: {
-  //           slidesToShow: 2,
-  //           slidesToScroll: 2,
-  //         },
-  //       },
-  //       {
-  //         breakpoint: 768,
-  //         settings: {
-  //           slidesToShow: 1,
-  //           slidesToScroll: 1,
-  //           variableWidth: true,
-  //           arrows: true,
-  //         },
-  //       },
-  //       {
-  //         breakpoint: 576,
-  //         settings: {
-  //           slidesToShow: 1,
-  //           slidesToScroll: 1,
-  //           variableWidth: true,
-  //           arrows: false,
-  //         },
-  //       },
-  //     ],
-  //   });
-  // }, []);
   return (
     <section className="blog-part">
       <div className="container">
