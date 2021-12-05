@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import MobileNav from "./components/common/mobileNav";
 import Banner from "./components/banner";
 import FeatureHome from "./components/featureHome";
-import Recommended from "./components/recommendedHome";
+import Recommended from "./components/featuredAdsHome";
 import TrendingHome from "./components/trendingHome";
 import CityHome from "./components/cityHome";
 import IncrementCounter from "./components/common/incrementCounter";

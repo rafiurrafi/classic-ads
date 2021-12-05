@@ -1,5 +1,5 @@
 import React from "react";
-// import $ from "jquery";
+import Slider from "react-slick";
 const PostHome = () => {
   // React.useEffect(() => {
   //   $(".blog-slider").slick({
