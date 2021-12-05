@@ -20,7 +20,7 @@ const categories = [
   },
   {
     _id: 3,
-    name: "Home &amp; Livings",
+    name: "Home & Livings",
     icon: "images/suggest/properties.png",
     numberOfAds: 21211,
   },

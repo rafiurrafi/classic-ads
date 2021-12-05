@@ -71,10 +71,12 @@
   ======================================*/
 .suggest-part {
   position: relative;
-  margin-top: -85px;
+  // margin-top: -85px;
   z-index: 2;
 }
-
+.suggest-slider.row {
+  align-items: stretch;
+}
 .suggest-slider .slick-slide img {
   display: inline-block;
 }

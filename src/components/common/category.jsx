@@ -2,20 +2,18 @@ import React from "react";
 import categories from "../../services/categoryService";
 const CategoryHome = (props) => {
   return (
-    <section class="suggest-part">
+    <section class="section suggest-part">
       <div class="container">
         <div class="suggest-slider slider-arrow row">
-          <div className="row">
-            {categories.map((category) => (
-              <div className="col-4 col-md-3 mb-3">
-                <a href="ad-list-column3.html" class="suggest-card">
-                  <img src={category.icon} alt="car" />
-                  <h6>{category.name}</h6>
-                  <p>(4,521) ads</p>
-                </a>
-              </div>
-            ))}
-          </div>
+          {categories.map((category) => (
+            <div className="col-4 col-md-3">
+              <a href="ad-list-column3.html" class="suggest-card">
+                <img src={category.icon} alt="car" />
+                <h6>{category.name}</h6>
+                <p>(4,521) ads</p>
+              </a>
+            </div>
+          ))}
           {/* <a href="ad-list-column3.html" class="suggest-card">
             <img src="images/suggest/furniture.png" alt="furniture" />
             <h6>furniture</h6>
