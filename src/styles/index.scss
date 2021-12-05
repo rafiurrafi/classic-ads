@@ -337,20 +337,11 @@
 .slick-dots.slick-thumb li.slick-active {
   opacity: 1;
 }
-// .slick-arrow {
-//   position: absolute;
-//   top: 40%;
-//   transform: translateY(-50%);
-//   color: white;
-// }
-// .slick-next {
-//   right: 0;
-// }
-// .slick-prev {
-//   left: 0;
-//   color: white;
-//   z-index: 2;
-// }
+
 .feature-part .col-md-5.col-lg-5 {
   align-self: center;
+}
+
+.blog-slider .slick-slide {
+  overflow: hidden;
 }

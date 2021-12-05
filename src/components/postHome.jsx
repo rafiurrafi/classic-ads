@@ -1,6 +1,40 @@
 import React from "react";
 import Slider from "react-slick";
 const PostHome = () => {
+  var settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <section className="blog-part">
       <div className="container">
@@ -21,170 +55,177 @@ const PostHome = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="blog-slider slider-arrow">
-              <div className="blog-card">
-                <div className="blog-img">
-                  <img src="images/blog/01.jpg" alt="blog" />
-                  <div className="blog-overlay">
-                    <span className="marketing">Marketing</span>
+              <Slider {...settings}>
+                <div className="blog-card">
+                  <div className="blog-img">
+                    <img src="images/blog/01.jpg" alt="blog" />
+                    <div className="blog-overlay">
+                      <span className="marketing">Marketing</span>
+                    </div>
                   </div>
-                </div>
-                <div className="blog-content">
-                  <a href="#!" className="blog-avatar">
-                    <img src="images/avatar/01.jpg" alt="avatar" />
-                  </a>
-                  <ul className="blog-meta">
-                    <li>
-                      <i className="fas fa-user"></i>
+                  <div className="blog-content">
+                    <a href="#!" className="blog-avatar">
+                      <img src="images/avatar/01.jpg" alt="avatar" />
+                    </a>
+                    <ul className="blog-meta">
+                      <li>
+                        <i className="fas fa-user"></i>
+                        <p>
+                          <a href="#!">MironMahmud</a>
+                        </p>
+                      </li>
+                      <li>
+                        <i className="fas fa-clock"></i>
+                        <p>02 Feb 2021</p>
+                      </li>
+                    </ul>
+                    <div className="blog-text">
+                      <h4>
+                        <a href="blog-details.html">
+                          Lorem ipsum dolor sit amet eius minus elit cum quaerat
+                          volupt.
+                        </a>
+                      </h4>
                       <p>
-                        <a href="#!">MironMahmud</a>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Temporibus veniam ad dolore labore laborum
+                        perspiciatis...
                       </p>
-                    </li>
-                    <li>
-                      <i className="fas fa-clock"></i>
-                      <p>02 Feb 2021</p>
-                    </li>
-                  </ul>
-                  <div className="blog-text">
-                    <h4>
-                      <a href="blog-details.html">
-                        Lorem ipsum dolor sit amet eius minus elit cum quaerat
-                        volupt.
-                      </a>
-                    </h4>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Temporibus veniam ad dolore labore laborum perspiciatis...
-                    </p>
-                  </div>
-                  <a href="blog-details.html" className="blog-read">
-                    <span>read more</span>
-                    <i className="fas fa-long-arrow-alt-right"></i>
-                  </a>
-                </div>
-              </div>
-              <div className="blog-card">
-                <div className="blog-img">
-                  <img src="images/blog/02.jpg" alt="blog" />
-                  <div className="blog-overlay">
-                    <span className="advertise">advertise</span>
+                    </div>
+                    <a href="blog-details.html" className="blog-read">
+                      <span>read more</span>
+                      <i className="fas fa-long-arrow-alt-right"></i>
+                    </a>
                   </div>
                 </div>
-                <div className="blog-content">
-                  <a href="#!" className="blog-avatar">
-                    <img src="images/avatar/02.jpg" alt="avatar" />
-                  </a>
-                  <ul className="blog-meta">
-                    <li>
-                      <i className="fas fa-user"></i>
+                <div className="blog-card">
+                  <div className="blog-img">
+                    <img src="images/blog/02.jpg" alt="blog" />
+                    <div className="blog-overlay">
+                      <span className="advertise">advertise</span>
+                    </div>
+                  </div>
+                  <div className="blog-content">
+                    <a href="#!" className="blog-avatar">
+                      <img src="images/avatar/02.jpg" alt="avatar" />
+                    </a>
+                    <ul className="blog-meta">
+                      <li>
+                        <i className="fas fa-user"></i>
+                        <p>
+                          <a href="#!">LabonnoKhan</a>
+                        </p>
+                      </li>
+                      <li>
+                        <i className="fas fa-clock"></i>
+                        <p>02 Feb 2021</p>
+                      </li>
+                    </ul>
+                    <div className="blog-text">
+                      <h4>
+                        <a href="blog-details.html">
+                          Lorem ipsum dolor sit amet eius minus elit cum quaerat
+                          volupt.
+                        </a>
+                      </h4>
                       <p>
-                        <a href="#!">LabonnoKhan</a>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Temporibus veniam ad dolore labore laborum
+                        perspiciatis...
                       </p>
-                    </li>
-                    <li>
-                      <i className="fas fa-clock"></i>
-                      <p>02 Feb 2021</p>
-                    </li>
-                  </ul>
-                  <div className="blog-text">
-                    <h4>
-                      <a href="blog-details.html">
-                        Lorem ipsum dolor sit amet eius minus elit cum quaerat
-                        volupt.
-                      </a>
-                    </h4>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Temporibus veniam ad dolore labore laborum perspiciatis...
-                    </p>
-                  </div>
-                  <a href="blog-details.html" className="blog-read">
-                    <span>read more</span>
-                    <i className="fas fa-long-arrow-alt-right"></i>
-                  </a>
-                </div>
-              </div>
-              <div className="blog-card">
-                <div className="blog-img">
-                  <img src="images/blog/03.jpg" alt="blog" />
-                  <div className="blog-overlay">
-                    <span className="safety">safety</span>
+                    </div>
+                    <a href="blog-details.html" className="blog-read">
+                      <span>read more</span>
+                      <i className="fas fa-long-arrow-alt-right"></i>
+                    </a>
                   </div>
                 </div>
-                <div className="blog-content">
-                  <a href="#!" className="blog-avatar">
-                    <img src="images/avatar/03.jpg" alt="avatar" />
-                  </a>
-                  <ul className="blog-meta">
-                    <li>
-                      <i className="fas fa-user"></i>
+                <div className="blog-card">
+                  <div className="blog-img">
+                    <img src="images/blog/03.jpg" alt="blog" />
+                    <div className="blog-overlay">
+                      <span className="safety">safety</span>
+                    </div>
+                  </div>
+                  <div className="blog-content">
+                    <a href="#!" className="blog-avatar">
+                      <img src="images/avatar/03.jpg" alt="avatar" />
+                    </a>
+                    <ul className="blog-meta">
+                      <li>
+                        <i className="fas fa-user"></i>
+                        <p>
+                          <a href="#!">MironMahmud</a>
+                        </p>
+                      </li>
+                      <li>
+                        <i className="fas fa-clock"></i>
+                        <p>02 Feb 2021</p>
+                      </li>
+                    </ul>
+                    <div className="blog-text">
+                      <h4>
+                        <a href="blog-details.html">
+                          Lorem ipsum dolor sit amet eius minus elit cum quaerat
+                          volupt.
+                        </a>
+                      </h4>
                       <p>
-                        <a href="#!">MironMahmud</a>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Temporibus veniam ad dolore labore laborum
+                        perspiciatis...
                       </p>
-                    </li>
-                    <li>
-                      <i className="fas fa-clock"></i>
-                      <p>02 Feb 2021</p>
-                    </li>
-                  </ul>
-                  <div className="blog-text">
-                    <h4>
-                      <a href="blog-details.html">
-                        Lorem ipsum dolor sit amet eius minus elit cum quaerat
-                        volupt.
-                      </a>
-                    </h4>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Temporibus veniam ad dolore labore laborum perspiciatis...
-                    </p>
-                  </div>
-                  <a href="blog-details.html" className="blog-read">
-                    <span>read more</span>
-                    <i className="fas fa-long-arrow-alt-right"></i>
-                  </a>
-                </div>
-              </div>
-              <div className="blog-card">
-                <div className="blog-img">
-                  <img src="images/blog/04.jpg" alt="blog" />
-                  <div className="blog-overlay">
-                    <span className="security">security</span>
+                    </div>
+                    <a href="blog-details.html" className="blog-read">
+                      <span>read more</span>
+                      <i className="fas fa-long-arrow-alt-right"></i>
+                    </a>
                   </div>
                 </div>
-                <div className="blog-content">
-                  <a href="#!" className="blog-avatar">
-                    <img src="images/avatar/04.jpg" alt="avatar" />
-                  </a>
-                  <ul className="blog-meta">
-                    <li>
-                      <i className="fas fa-user"></i>
+                <div className="blog-card">
+                  <div className="blog-img">
+                    <img src="images/blog/04.jpg" alt="blog" />
+                    <div className="blog-overlay">
+                      <span className="security">security</span>
+                    </div>
+                  </div>
+                  <div className="blog-content">
+                    <a href="#!" className="blog-avatar">
+                      <img src="images/avatar/04.jpg" alt="avatar" />
+                    </a>
+                    <ul className="blog-meta">
+                      <li>
+                        <i className="fas fa-user"></i>
+                        <p>
+                          <a href="#!">TahminaBonny</a>
+                        </p>
+                      </li>
+                      <li>
+                        <i className="fas fa-clock"></i>
+                        <p>02 Feb 2021</p>
+                      </li>
+                    </ul>
+                    <div className="blog-text">
+                      <h4>
+                        <a href="blog-details.html">
+                          Lorem ipsum dolor sit amet eius minus elit cum quaerat
+                          volupt.
+                        </a>
+                      </h4>
                       <p>
-                        <a href="#!">TahminaBonny</a>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Temporibus veniam ad dolore labore laborum
+                        perspiciatis...
                       </p>
-                    </li>
-                    <li>
-                      <i className="fas fa-clock"></i>
-                      <p>02 Feb 2021</p>
-                    </li>
-                  </ul>
-                  <div className="blog-text">
-                    <h4>
-                      <a href="blog-details.html">
-                        Lorem ipsum dolor sit amet eius minus elit cum quaerat
-                        volupt.
-                      </a>
-                    </h4>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Temporibus veniam ad dolore labore laborum perspiciatis...
-                    </p>
+                    </div>
+                    <a href="blog-details.html" className="blog-read">
+                      <span>read more</span>
+                      <i className="fas fa-long-arrow-alt-right"></i>
+                    </a>
                   </div>
-                  <a href="blog-details.html" className="blog-read">
-                    <span>read more</span>
-                    <i className="fas fa-long-arrow-alt-right"></i>
-                  </a>
                 </div>
-              </div>
+              </Slider>
+              {/* End of slider  */}
             </div>
           </div>
         </div>
