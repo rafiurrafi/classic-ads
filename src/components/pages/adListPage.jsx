@@ -8,6 +8,8 @@ import FilterRating from "../common/filter/filterRating";
 import FilterCities from "../common/filter/filterCities";
 import FilterPopularity from "../common/filter/filterPopularity";
 import FilterCategory from "../common/filter/filterCategory";
+import { products } from "../../services/product";
+import AdListSingle from "../common/adListSingle";
 const AdListPage = ({ isOpenAside, onOpenAside }) => {
   return (
     <div>
@@ -66,174 +68,9 @@ const AdListPage = ({ isOpenAside, onOpenAside }) => {
               <div class="row">
                 <div class="col-lg-12">
                   <div class="ad-feature-slider slider-arrow">
-                    <div class="feature-card">
-                      <a href="#" class="feature-img">
-                        <img src="images/product/10.jpg" alt="feature" />
-                      </a>
-                      <div class="cross-inline-badge feature-badge">
-                        <span>featured</span>
-                        <i class="fas fa-book-open"></i>
-                      </div>
-                      <button type="button" class="feature-wish">
-                        <i class="fas fa-heart"></i>
-                      </button>
-                      <div class="feature-content">
-                        <ol class="breadcrumb feature-category">
-                          <li>
-                            <span class="flat-badge rent">rent</span>
-                          </li>
-                          <li class="breadcrumb-item">
-                            <a href="#">automobile</a>
-                          </li>
-                          <li
-                            class="breadcrumb-item active"
-                            aria-current="page"
-                          >
-                            private car
-                          </li>
-                        </ol>
-                        <h3 class="feature-title">
-                          <a href="ad-details-left.html">
-                            Unde eveniet ducimus nostrum maiores soluta
-                            temporibus ipsum dolor sit amet.
-                          </a>
-                        </h3>
-                        <div class="feature-meta">
-                          <span class="feature-price">
-                            $1200<small>/Monthly</small>
-                          </span>
-                          <span class="feature-time">
-                            <i class="fas fa-clock"></i>56 minute ago
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="feature-card">
-                      <a href="#" class="feature-img">
-                        <img src="images/product/01.jpg" alt="feature" />
-                      </a>
-                      <div class="cross-inline-badge feature-badge">
-                        <span>featured</span>
-                        <i class="fas fa-book-open"></i>
-                      </div>
-                      <button type="button" class="feature-wish">
-                        <i class="fas fa-heart"></i>
-                      </button>
-                      <div class="feature-content">
-                        <ol class="breadcrumb feature-category">
-                          <li>
-                            <span class="flat-badge booking">booking</span>
-                          </li>
-                          <li class="breadcrumb-item">
-                            <a href="#">Property</a>
-                          </li>
-                          <li
-                            class="breadcrumb-item active"
-                            aria-current="page"
-                          >
-                            House
-                          </li>
-                        </ol>
-                        <h3 class="feature-title">
-                          <a href="ad-details-left.html">
-                            Unde eveniet ducimus nostrum maiores soluta
-                            temporibus ipsum dolor sit amet.
-                          </a>
-                        </h3>
-                        <div class="feature-meta">
-                          <span class="feature-price">
-                            $800<small>/perday</small>
-                          </span>
-                          <span class="feature-time">
-                            <i class="fas fa-clock"></i>56 minute ago
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="feature-card">
-                      <a href="#" class="feature-img">
-                        <img src="images/product/08.jpg" alt="feature" />
-                      </a>
-                      <div class="cross-inline-badge feature-badge">
-                        <span>featured</span>
-                        <i class="fas fa-book-open"></i>
-                      </div>
-                      <button type="button" class="feature-wish">
-                        <i class="fas fa-heart"></i>
-                      </button>
-                      <div class="feature-content">
-                        <ol class="breadcrumb feature-category">
-                          <li>
-                            <span class="flat-badge sale">sale</span>
-                          </li>
-                          <li class="breadcrumb-item">
-                            <a href="#">gadget</a>
-                          </li>
-                          <li
-                            class="breadcrumb-item active"
-                            aria-current="page"
-                          >
-                            iphone
-                          </li>
-                        </ol>
-                        <h3 class="feature-title">
-                          <a href="ad-details-left.html">
-                            Unde eveniet ducimus nostrum maiores soluta
-                            temporibus ipsum dolor sit amet.
-                          </a>
-                        </h3>
-                        <div class="feature-meta">
-                          <span class="feature-price">
-                            $1150<small>/Negotiable</small>
-                          </span>
-                          <span class="feature-time">
-                            <i class="fas fa-clock"></i>56 minute ago
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="feature-card">
-                      <a href="#" class="feature-img">
-                        <img src="images/product/06.jpg" alt="feature" />
-                      </a>
-                      <div class="cross-inline-badge feature-badge">
-                        <span>featured</span>
-                        <i class="fas fa-book-open"></i>
-                      </div>
-                      <button type="button" class="feature-wish">
-                        <i class="fas fa-heart"></i>
-                      </button>
-                      <div class="feature-content">
-                        <ol class="breadcrumb feature-category">
-                          <li>
-                            <span class="flat-badge sale">sale</span>
-                          </li>
-                          <li class="breadcrumb-item">
-                            <a href="#">automobile</a>
-                          </li>
-                          <li
-                            class="breadcrumb-item active"
-                            aria-current="page"
-                          >
-                            cycle
-                          </li>
-                        </ol>
-                        <h3 class="feature-title">
-                          <a href="ad-details-left.html">
-                            Unde eveniet ducimus nostrum maiores soluta
-                            temporibus ipsum dolor sit amet.
-                          </a>
-                        </h3>
-                        <div class="feature-meta">
-                          <span class="feature-price">
-                            $455<small>/fixed</small>
-                          </span>
-                          <span class="feature-time">
-                            <i class="fas fa-clock"></i>56 minute ago
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                    {products.map((product) => (
+                      <AdListSingle ad={product} />
+                    ))}
                   </div>
                 </div>
               </div>
@@ -272,14 +109,14 @@ const AdListPage = ({ isOpenAside, onOpenAside }) => {
                           <i class="fas fa-tags"></i>
                         </li>
                         <li class="breadcrumb-item">
-                          <a href="#">Luxury</a>
+                          <a href="#!">Luxury</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
                           resort
                         </li>
                       </ol>
                       <h5 class="product-title">
-                        <a href="#">
+                        <a href="#!">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           odio accusamus inventore nobis consequatur ducimus.
                         </a>
@@ -346,14 +183,14 @@ const AdListPage = ({ isOpenAside, onOpenAside }) => {
                           <i class="fas fa-tags"></i>
                         </li>
                         <li class="breadcrumb-item">
-                          <a href="#">gadget</a>
+                          <a href="#!">gadget</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
                           mobile
                         </li>
                       </ol>
                       <h5 class="product-title">
-                        <a href="#">
+                        <a href="#!">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           odio accusamus inventore nobis consequatur ducimus.
                         </a>
@@ -420,14 +257,14 @@ const AdListPage = ({ isOpenAside, onOpenAside }) => {
                           <i class="fas fa-tags"></i>
                         </li>
                         <li class="breadcrumb-item">
-                          <a href="#">automobile</a>
+                          <a href="#!">automobile</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
                           private car
                         </li>
                       </ol>
                       <h5 class="product-title">
-                        <a href="#">
+                        <a href="#!">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           odio accusamus inventore nobis consequatur ducimus.
                         </a>
@@ -494,14 +331,14 @@ const AdListPage = ({ isOpenAside, onOpenAside }) => {
                           <i class="fas fa-tags"></i>
                         </li>
                         <li class="breadcrumb-item">
-                          <a href="#">Luxury</a>
+                          <a href="#!">Luxury</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
                           Duplex house
                         </li>
                       </ol>
                       <h5 class="product-title">
-                        <a href="#">
+                        <a href="#!">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           odio accusamus inventore nobis consequatur ducimus.
                         </a>
@@ -568,14 +405,14 @@ const AdListPage = ({ isOpenAside, onOpenAside }) => {
                           <i class="fas fa-tags"></i>
                         </li>
                         <li class="breadcrumb-item">
-                          <a href="#">automobile</a>
+                          <a href="#!">automobile</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
                           bike
                         </li>
                       </ol>
                       <h5 class="product-title">
-                        <a href="#">
+                        <a href="#!">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           odio accusamus inventore nobis consequatur ducimus.
                         </a>
@@ -642,14 +479,14 @@ const AdListPage = ({ isOpenAside, onOpenAside }) => {
                           <i class="fas fa-tags"></i>
                         </li>
                         <li class="breadcrumb-item">
-                          <a href="#">gadget</a>
+                          <a href="#!">gadget</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
                           camera
                         </li>
                       </ol>
                       <h5 class="product-title">
-                        <a href="#">
+                        <a href="#!">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           odio accusamus inventore nobis consequatur ducimus.
                         </a>
