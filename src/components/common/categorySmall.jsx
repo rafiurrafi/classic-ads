@@ -1,5 +1,6 @@
 import React from "react";
 import categories from "../../services/categoryService";
+import SubcategorySmall from "./subcategorySmall";
 const CategorySmall = (props) => {
   return (
     <section class="section suggest-part suggest-part-small">
@@ -15,6 +16,7 @@ const CategorySmall = (props) => {
           ))}
         </div>
         {/* end of suggest slider  */}
+        <SubcategorySmall />
       </div>
     </section>
   );

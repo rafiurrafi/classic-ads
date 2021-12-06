@@ -360,3 +360,40 @@
 .blog-slider .slick-slide {
   overflow: hidden;
 }
+/*=====================================
+  SUBCATEGORY SMALL DEVICE PART STYLE
+  ======================================*/
+.subcategory {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: white;
+  z-index: 5 !important;
+  &__header {
+    height: 60px;
+    background-color: var(--primary);
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+  }
+  &__input-container {
+    background-color: white;
+    height: 100%;
+    display: flex;
+  }
+  &__input {
+    background-color: transparent;
+    flex: 1;
+  }
+  &__btn {
+    background-color: transparent;
+    flex: 0 0 10%;
+    color: var(--primary);
+    font-size: 25px;
+  }
+  &__content {
+    margin-top: 70px;
+  }
+}
