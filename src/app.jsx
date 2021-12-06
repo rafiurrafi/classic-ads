@@ -1,12 +1,10 @@
 import Header from "./components/header";
 import useToggle from "./components/hooks/ustToggle";
-import "./styles/app.scss";
-import "./styles/index.scss";
 import $ from "jquery";
 import { useEffect } from "react";
-
 import Footer from "./components/footer";
 import HomePage from "./components/pages/homePage";
+import "./styles/app.scss";
 
 function App() {
   const [isOpenAside, setIsOpenAside] = useToggle(false);

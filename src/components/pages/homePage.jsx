@@ -1,6 +1,5 @@
 import React from "react";
 import SidebarProfile from "../sidebarProfile";
-
 import MobileNav from "../common/mobileNav";
 import Banner from "../banner";
 import FeatureHome from "../featureHome";
@@ -11,6 +10,8 @@ import IncrementCounter from "../common/incrementCounter";
 import PostAds from "../postAds";
 import PostHome from "../postHome";
 import CategoryHome from "../common/category";
+import "../../styles/index.scss";
+import CategorySmall from "../common/categorySmall";
 const HomePage = ({ isOpenAside, onOpenAside }) => {
   return (
     <div>
@@ -18,6 +19,7 @@ const HomePage = ({ isOpenAside, onOpenAside }) => {
       <MobileNav />
       <Banner />
       <CategoryHome />
+      <CategorySmall />
       <FeatureHome />
       <Recommended />
       <TrendingHome />

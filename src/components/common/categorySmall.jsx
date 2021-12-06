@@ -2,7 +2,7 @@ import React from "react";
 import categories from "../../services/categoryService";
 const CategorySmall = (props) => {
   return (
-    <section class="section suggest-part">
+    <section class="section suggest-part suggest-part-small">
       <div class="container">
         <div class="suggest-slider slider-arrow row">
           {categories.map((category) => (
@@ -14,6 +14,7 @@ const CategorySmall = (props) => {
             </div>
           ))}
         </div>
+        {/* end of suggest slider  */}
       </div>
     </section>
   );
