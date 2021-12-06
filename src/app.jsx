@@ -5,7 +5,8 @@ import { useEffect } from "react";
 import Footer from "./components/footer";
 import HomePage from "./components/pages/homePage";
 import "./styles/app.scss";
-
+import { Switch, Route } from "react-router-dom";
+import AdListPage from "./components/pages/adListPage";
 function App() {
   const [isOpenAside, setIsOpenAside] = useToggle(false);
   useEffect(() => {
@@ -21,7 +22,24 @@ function App() {
   return (
     <div className="App">
       <Header onOpenAside={setIsOpenAside} />
-      <HomePage isOpenAside={isOpenAside} onOpenAside={setIsOpenAside} />
+      <Switch>
+        <Route
+          path="/ad"
+          render={() => (
+            <AdListPage
+              isOpenAside={isOpenAside}
+              onOpenAside={setIsOpenAside}
+            />
+          )}
+        />
+        <Route
+          path="/"
+          render={() => (
+            <HomePage isOpenAside={isOpenAside} onOpenAside={setIsOpenAside} />
+          )}
+        />
+      </Switch>
+
       <Footer />
     </div>
   );

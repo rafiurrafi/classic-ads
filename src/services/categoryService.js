@@ -240,6 +240,18 @@ const categories = [
         title: "Category 1 4",
         ads: 21211,
       },
+      {
+        _id: 7,
+        icon: "images/suggest/education.png",
+        title: "Category 1 3",
+        ads: 21211,
+      },
+      {
+        _id: 8,
+        icon: "images/suggest/education.png",
+        title: "Category 1 4",
+        ads: 21211,
+      },
     ],
   },
   {
