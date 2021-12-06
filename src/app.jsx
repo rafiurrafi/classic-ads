@@ -1,21 +1,12 @@
 import Header from "./components/header";
 import useToggle from "./components/hooks/ustToggle";
-import SidebarProfile from "./components/sidebarProfile";
 import "./styles/app.scss";
 import "./styles/index.scss";
 import $ from "jquery";
-import { useEffect, useState } from "react";
-import MobileNav from "./components/common/mobileNav";
-import Banner from "./components/banner";
-import FeatureHome from "./components/featureHome";
-import Recommended from "./components/featuredAdsHome";
-import TrendingHome from "./components/trendingHome";
-import CityHome from "./components/cityHome";
-import IncrementCounter from "./components/common/incrementCounter";
-import PostAds from "./components/postAds";
-import PostHome from "./components/postHome";
+import { useEffect } from "react";
+
 import Footer from "./components/footer";
-import CategoryHome from "./components/common/category";
+import HomePage from "./components/pages/homePage";
 
 function App() {
   const [isOpenAside, setIsOpenAside] = useToggle(false);
@@ -32,17 +23,7 @@ function App() {
   return (
     <div className="App">
       <Header onOpenAside={setIsOpenAside} />
-      <SidebarProfile isOpenAside={isOpenAside} onOpenAside={setIsOpenAside} />
-      <MobileNav />
-      <Banner />
-      <CategoryHome />
-      <FeatureHome />
-      <Recommended />
-      <TrendingHome />
-      <IncrementCounter />
-      <CityHome />
-      <PostAds />
-      <PostHome />
+      <HomePage isOpenAside={isOpenAside} onOpenAside={setIsOpenAside} />
       <Footer />
     </div>
   );
