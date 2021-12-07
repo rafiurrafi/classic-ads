@@ -12,6 +12,7 @@ import { productService } from "../../services/product";
 import AdListSingle from "../common/adListSingle";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+// import images
 const AdListPage = (props) => {
   const settings = {
     className: "center",
@@ -26,6 +27,8 @@ const AdListPage = (props) => {
   const { isOpenAside, onOpenAside, match } = props;
   const { category: pageCategory, subcategory: pageSubcategory } = match.params;
   const [products, setProducts] = useState(productService);
+  const [spotlight, setSpotlight] = useState([]);
+  //filter using category / subcategory
   useEffect(() => {
     if (!pageSubcategory) {
       const filteredProducts = products.filter(
@@ -38,7 +41,16 @@ const AdListPage = (props) => {
       );
       setProducts(filteredProducts);
     }
-  }, []);
+  }, [products, pageCategory, pageSubcategory]);
+
+  //filter using spotlight feature
+  useEffect(() => {
+    const filterSpotlight = products.filter(
+      (product) =>
+        product.category === pageCategory && product.priceType === "spotlight"
+    );
+    setSpotlight(filterSpotlight);
+  }, [spotlight, pageCategory, products]);
 
   return (
     <div>
@@ -96,11 +108,14 @@ const AdListPage = (props) => {
               </div>
               <div className="row">
                 <div className="col-lg-12">
-                  <div className="ad-feature-slider slider-arrow">
+                  <div className="ad-feature-slider ">
                     <Slider {...settings}>
                       <div className="feature-card">
                         <a href="#!" className="feature-img">
-                          <img src="images/product/10.jpg" alt="feature" />
+                          <img
+                            src="../../images/product/10.jpg"
+                            alt="feature"
+                          />
                         </a>
                         <div className="cross-inline-badge feature-badge">
                           <span>featured</span>
@@ -143,7 +158,10 @@ const AdListPage = (props) => {
 
                       <div className="feature-card">
                         <a href="#!" className="feature-img">
-                          <img src="images/product/01.jpg" alt="feature" />
+                          <img
+                            src="../../images/product/01.jpg"
+                            alt="feature"
+                          />
                         </a>
                         <div className="cross-inline-badge feature-badge">
                           <span>featured</span>
@@ -187,7 +205,10 @@ const AdListPage = (props) => {
                       </div>
                       <div className="feature-card">
                         <a href="#!" className="feature-img">
-                          <img src="images/product/08.jpg" alt="feature" />
+                          <img
+                            src="../../images/product/08.jpg"
+                            alt="feature"
+                          />
                         </a>
                         <div className="cross-inline-badge feature-badge">
                           <span>featured</span>
@@ -229,7 +250,10 @@ const AdListPage = (props) => {
                       </div>
                       <div className="feature-card">
                         <a href="#!" className="feature-img">
-                          <img src="images/product/06.jpg" alt="feature" />
+                          <img
+                            src="../../images/product/06.jpg"
+                            alt="feature"
+                          />
                         </a>
                         <div className="cross-inline-badge feature-badge">
                           <span>featured</span>

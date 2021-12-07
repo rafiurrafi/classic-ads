@@ -6,7 +6,7 @@ const AdListSingle = ({ ads }) => {
       <div class="product-card standard">
         <div class="product-media">
           <div class="product-img">
-            <img src="images/product/07.jpg" alt="product" />
+            <img src="../../../images/product/07.jpg" alt="product" />
           </div>
           <div class="cross-vertical-badge product-badge">
             <i class="fas fa-clipboard-check"></i>
