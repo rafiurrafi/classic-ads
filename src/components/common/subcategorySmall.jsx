@@ -1,11 +1,7 @@
 import React from "react";
 import { AiOutlineLeft } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import useInput from "../hooks/useInput";
-// const SubcategorySmall = ({ title, subcategories, onClose }) => {
-//   const [search, setSearch] = useInput("");
 
-// };
 class SubcategorySmall extends React.Component {
   state = {
     search: "",

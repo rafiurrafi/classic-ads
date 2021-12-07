@@ -1,4 +1,4 @@
-export const products = [
+export const productService = [
   // status : booking, sale, rental
   //price type : free, featured, spotlight
   {

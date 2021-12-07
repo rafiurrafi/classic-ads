@@ -1,6 +1,6 @@
 import React from "react";
 
-const AdListSingle = () => {
+const AdListSingle = ({ ads }) => {
   return (
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
       <div class="product-card standard">
@@ -36,10 +36,10 @@ const AdListSingle = () => {
               <i class="fas fa-tags"></i>
             </li>
             <li class="breadcrumb-item">
-              <a href="#!">Luxury</a>
+              <a href="#!">{ads.category}</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
-              resort
+              {ads.subcategory}
             </li>
           </ol>
           <h5 class="product-title">

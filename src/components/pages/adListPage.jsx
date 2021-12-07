@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SidebarProfile from "../sidebarProfile";
 import MobileNav from "../common/mobileNav";
 import SingleBanner from "../common/singleBanner";
@@ -8,11 +8,11 @@ import FilterRating from "../common/filter/filterRating";
 import FilterCities from "../common/filter/filterCities";
 import FilterPopularity from "../common/filter/filterPopularity";
 import FilterCategory from "../common/filter/filterCategory";
-import { products } from "../../services/product";
+import { productService } from "../../services/product";
 import AdListSingle from "../common/adListSingle";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-const AdListPage = ({ isOpenAside, onOpenAside }) => {
+const AdListPage = (props) => {
   const settings = {
     className: "center",
     centerMode: true,
@@ -23,6 +23,12 @@ const AdListPage = ({ isOpenAside, onOpenAside }) => {
     autoplay: true,
     autoplaySpeed: 1000,
   };
+  const { isOpenAside, onOpenAside, match } = props;
+  const { category: pageCategory, subcategory: pageSubcategory } = match.params;
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    setProducts(productService);
+  }, []);
   return (
     <div>
       <SidebarProfile isOpenAside={isOpenAside} onOpenAside={onOpenAside} />
@@ -257,7 +263,7 @@ const AdListPage = ({ isOpenAside, onOpenAside }) => {
               <div class="row ad-standard">
                 {products.map((product, index) => {
                   if (index > 5) return null;
-                  return <AdListSingle ad={product} />;
+                  return <AdListSingle key={product._id} ads={product} />;
                 })}
               </div>
               <div class="row">

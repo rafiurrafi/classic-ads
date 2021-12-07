@@ -2,17 +2,17 @@ import React from "react";
 
 const SingleBanner = ({ title }) => {
   return (
-    <section class="inner-section single-banner">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="single-content">
+    <section className="inner-section single-banner">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="single-content">
               <h2>{title}</h2>
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
                   <a href="index.html">Home</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item active" aria-current="page">
                   ad-list-column1
                 </li>
               </ol>

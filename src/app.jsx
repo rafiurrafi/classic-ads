@@ -24,14 +24,16 @@ function App() {
       <Header onOpenAside={setIsOpenAside} />
       <Switch>
         <Route
-          path="/ads"
-          render={() => (
+          path="/ads/:category/:subcategory"
+          render={(props) => (
             <AdListPage
               isOpenAside={isOpenAside}
               onOpenAside={setIsOpenAside}
+              {...props}
             />
           )}
         />
+        {/* <Route path="/" component={AdListPage} /> */}
         <Route
           path="/"
           render={() => (
