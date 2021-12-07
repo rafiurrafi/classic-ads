@@ -24,7 +24,7 @@ function App() {
       <Header onOpenAside={setIsOpenAside} />
       <Switch>
         <Route
-          path="/ads/:category/:subcategory"
+          path="/ads/:category?/:subcategory?"
           render={(props) => (
             <AdListPage
               isOpenAside={isOpenAside}

@@ -25,55 +25,66 @@ const AdListPage = (props) => {
   };
   const { isOpenAside, onOpenAside, match } = props;
   const { category: pageCategory, subcategory: pageSubcategory } = match.params;
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(productService);
   useEffect(() => {
-    setProducts(productService);
+    if (!pageSubcategory) {
+      const filteredProducts = products.filter(
+        (product) => product.category === pageCategory
+      );
+      setProducts(filteredProducts);
+    } else {
+      const filteredProducts = products.filter(
+        (product) => product.subcategory === pageSubcategory
+      );
+      setProducts(filteredProducts);
+    }
   }, []);
+
   return (
     <div>
       <SidebarProfile isOpenAside={isOpenAside} onOpenAside={onOpenAside} />
       <MobileNav />
       <SingleBanner title="Electronics" />
-      <section class="inner-section ad-list-part">
-        <div class="container">
-          <div class="row content-reverse">
-            <div class="col-lg-4 col-xl-3">
-              <div class="row">
-                <div class="col-md-6 col-lg-12">
+      <section className="inner-section ad-list-part">
+        <div className="container">
+          <div className="row content-reverse">
+            <div className="col-lg-4 col-xl-3">
+              <div className="row">
+                <div className="col-md-6 col-lg-12">
                   <FilterPrice />
                 </div>
-                <div class="col-md-6 col-lg-12">
+                <div className="col-md-6 col-lg-12">
                   <FilterType />
                 </div>
-                <div class="col-md-6 col-lg-12">
+                <div className="col-md-6 col-lg-12">
                   <FilterRating />
                 </div>
-                <div class="col-md-6 col-lg-12">
+                <div className="col-md-6 col-lg-12">
                   <FilterCities />
                 </div>
-                <div class="col-md-6 col-lg-12">
+                <div className="col-md-6 col-lg-12">
                   <FilterPopularity />
                 </div>
-                <div class="col-md-6 col-lg-12">
+                <div className="col-md-6 col-lg-12">
                   <FilterCategory />
                 </div>
               </div>
             </div>
-            <div class="col-lg-8 col-xl-9">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="header-filter">
-                    <div class="filter-show">
-                      <label class="filter-label">Show :</label>
-                      <select class="custom-select filter-select">
+            <div className="col-lg-8 col-xl-9">
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="header-filter">
+                    <div className="filter-show">
+                      <label className="filter-label">Show :</label>
+                      <select className="custom-select filter-select">
                         <option value="1">12</option>
                         <option value="2">24</option>
                         <option value="3">36</option>
                       </select>
                     </div>
-                    <div class="filter-short">
-                      <label class="filter-label">Short by :</label>
-                      <select class="custom-select filter-select">
+                    <div className="filter-short">
+                      <label className="filter-label">Short by :</label>
+                      <select className="custom-select filter-select">
                         <option selected>default</option>
                         <option value="3">trending</option>
                         <option value="1">featured</option>
@@ -83,175 +94,177 @@ const AdListPage = (props) => {
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="ad-feature-slider slider-arrow">
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="ad-feature-slider slider-arrow">
                     <Slider {...settings}>
-                      <div class="feature-card">
-                        <a href="#!" class="feature-img">
+                      <div className="feature-card">
+                        <a href="#!" className="feature-img">
                           <img src="images/product/10.jpg" alt="feature" />
                         </a>
-                        <div class="cross-inline-badge feature-badge">
+                        <div className="cross-inline-badge feature-badge">
                           <span>featured</span>
-                          <i class="fas fa-book-open"></i>
+                          <i className="fas fa-book-open"></i>
                         </div>
-                        <button type="button" class="feature-wish">
-                          <i class="fas fa-heart"></i>
+                        <button type="button" className="feature-wish">
+                          <i className="fas fa-heart"></i>
                         </button>
-                        <div class="feature-content">
-                          <ol class="breadcrumb feature-category">
+                        <div className="feature-content">
+                          <ol className="breadcrumb feature-category">
                             <li>
-                              <span class="flat-badge rent">rent</span>
+                              <span className="flat-badge rent">rent</span>
                             </li>
-                            <li class="breadcrumb-item">
+                            <li className="breadcrumb-item">
                               <a href="#!">automobile</a>
                             </li>
                             <li
-                              class="breadcrumb-item active"
+                              className="breadcrumb-item active"
                               aria-current="page"
                             >
                               private car
                             </li>
                           </ol>
-                          <h3 class="feature-title">
+                          <h3 className="feature-title">
                             <a href="ad-details-left.html">
                               Unde eveniet ducimus nostrum maiores soluta
                               temporibus ipsum dolor sit amet.
                             </a>
                           </h3>
-                          <div class="feature-meta">
-                            <span class="feature-price">
+                          <div className="feature-meta">
+                            <span className="feature-price">
                               $1200<small>/Monthly</small>
                             </span>
-                            <span class="feature-time">
-                              <i class="fas fa-clock"></i>56 minute ago
+                            <span className="feature-time">
+                              <i className="fas fa-clock"></i>56 minute ago
                             </span>
                           </div>
                         </div>
                       </div>
 
-                      <div class="feature-card">
-                        <a href="#!" class="feature-img">
+                      <div className="feature-card">
+                        <a href="#!" className="feature-img">
                           <img src="images/product/01.jpg" alt="feature" />
                         </a>
-                        <div class="cross-inline-badge feature-badge">
+                        <div className="cross-inline-badge feature-badge">
                           <span>featured</span>
-                          <i class="fas fa-book-open"></i>
+                          <i className="fas fa-book-open"></i>
                         </div>
-                        <button type="button" class="feature-wish">
-                          <i class="fas fa-heart"></i>
+                        <button type="button" className="feature-wish">
+                          <i className="fas fa-heart"></i>
                         </button>
-                        <div class="feature-content">
-                          <ol class="breadcrumb feature-category">
+                        <div className="feature-content">
+                          <ol className="breadcrumb feature-category">
                             <li>
-                              <span class="flat-badge booking">booking</span>
+                              <span className="flat-badge booking">
+                                booking
+                              </span>
                             </li>
-                            <li class="breadcrumb-item">
+                            <li className="breadcrumb-item">
                               <a href="#!">Property</a>
                             </li>
                             <li
-                              class="breadcrumb-item active"
+                              className="breadcrumb-item active"
                               aria-current="page"
                             >
                               House
                             </li>
                           </ol>
-                          <h3 class="feature-title">
+                          <h3 className="feature-title">
                             <a href="ad-details-left.html">
                               Unde eveniet ducimus nostrum maiores soluta
                               temporibus ipsum dolor sit amet.
                             </a>
                           </h3>
-                          <div class="feature-meta">
-                            <span class="feature-price">
+                          <div className="feature-meta">
+                            <span className="feature-price">
                               $800<small>/perday</small>
                             </span>
-                            <span class="feature-time">
-                              <i class="fas fa-clock"></i>56 minute ago
+                            <span className="feature-time">
+                              <i className="fas fa-clock"></i>56 minute ago
                             </span>
                           </div>
                         </div>
                       </div>
-                      <div class="feature-card">
-                        <a href="#!" class="feature-img">
+                      <div className="feature-card">
+                        <a href="#!" className="feature-img">
                           <img src="images/product/08.jpg" alt="feature" />
                         </a>
-                        <div class="cross-inline-badge feature-badge">
+                        <div className="cross-inline-badge feature-badge">
                           <span>featured</span>
-                          <i class="fas fa-book-open"></i>
+                          <i className="fas fa-book-open"></i>
                         </div>
-                        <button type="button" class="feature-wish">
-                          <i class="fas fa-heart"></i>
+                        <button type="button" className="feature-wish">
+                          <i className="fas fa-heart"></i>
                         </button>
-                        <div class="feature-content">
-                          <ol class="breadcrumb feature-category">
+                        <div className="feature-content">
+                          <ol className="breadcrumb feature-category">
                             <li>
-                              <span class="flat-badge sale">sale</span>
+                              <span className="flat-badge sale">sale</span>
                             </li>
-                            <li class="breadcrumb-item">
+                            <li className="breadcrumb-item">
                               <a href="#!">gadget</a>
                             </li>
                             <li
-                              class="breadcrumb-item active"
+                              className="breadcrumb-item active"
                               aria-current="page"
                             >
                               iphone
                             </li>
                           </ol>
-                          <h3 class="feature-title">
+                          <h3 className="feature-title">
                             <a href="ad-details-left.html">
                               Unde eveniet ducimus nostrum maiores soluta
                               temporibus ipsum dolor sit amet.
                             </a>
                           </h3>
-                          <div class="feature-meta">
-                            <span class="feature-price">
+                          <div className="feature-meta">
+                            <span className="feature-price">
                               $1150<small>/Negotiable</small>
                             </span>
-                            <span class="feature-time">
-                              <i class="fas fa-clock"></i>56 minute ago
+                            <span className="feature-time">
+                              <i className="fas fa-clock"></i>56 minute ago
                             </span>
                           </div>
                         </div>
                       </div>
-                      <div class="feature-card">
-                        <a href="#!" class="feature-img">
+                      <div className="feature-card">
+                        <a href="#!" className="feature-img">
                           <img src="images/product/06.jpg" alt="feature" />
                         </a>
-                        <div class="cross-inline-badge feature-badge">
+                        <div className="cross-inline-badge feature-badge">
                           <span>featured</span>
-                          <i class="fas fa-book-open"></i>
+                          <i className="fas fa-book-open"></i>
                         </div>
-                        <button type="button" class="feature-wish">
-                          <i class="fas fa-heart"></i>
+                        <button type="button" className="feature-wish">
+                          <i className="fas fa-heart"></i>
                         </button>
-                        <div class="feature-content">
-                          <ol class="breadcrumb feature-category">
+                        <div className="feature-content">
+                          <ol className="breadcrumb feature-category">
                             <li>
-                              <span class="flat-badge sale">sale</span>
+                              <span className="flat-badge sale">sale</span>
                             </li>
-                            <li class="breadcrumb-item">
+                            <li className="breadcrumb-item">
                               <a href="#!">automobile</a>
                             </li>
                             <li
-                              class="breadcrumb-item active"
+                              className="breadcrumb-item active"
                               aria-current="page"
                             >
                               cycle
                             </li>
                           </ol>
-                          <h3 class="feature-title">
+                          <h3 className="feature-title">
                             <a href="ad-details-left.html">
                               Unde eveniet ducimus nostrum maiores soluta
                               temporibus ipsum dolor sit amet.
                             </a>
                           </h3>
-                          <div class="feature-meta">
-                            <span class="feature-price">
+                          <div className="feature-meta">
+                            <span className="feature-price">
                               $455<small>/fixed</small>
                             </span>
-                            <span class="feature-time">
-                              <i class="fas fa-clock"></i>56 minute ago
+                            <span className="feature-time">
+                              <i className="fas fa-clock"></i>56 minute ago
                             </span>
                           </div>
                         </div>
@@ -260,46 +273,46 @@ const AdListPage = (props) => {
                   </div>
                 </div>
               </div>
-              <div class="row ad-standard">
+              <div className="row ad-standard">
                 {products.map((product, index) => {
                   if (index > 5) return null;
                   return <AdListSingle key={product._id} ads={product} />;
                 })}
               </div>
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="footer-pagection">
-                    <p class="page-info">Showing 12 of 60 Results</p>
-                    <ul class="pagination">
-                      <li class="page-item">
-                        <a class="page-link" href="#">
-                          <i class="fas fa-long-arrow-alt-left"></i>
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="footer-pagection">
+                    <p className="page-info">Showing 12 of 60 Results</p>
+                    <ul className="pagination">
+                      <li className="page-item">
+                        <a className="page-link" href="#">
+                          <i className="fas fa-long-arrow-alt-left"></i>
                         </a>
                       </li>
-                      <li class="page-item">
-                        <a class="page-link active" href="#">
+                      <li className="page-item">
+                        <a className="page-link active" href="#">
                           1
                         </a>
                       </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">
+                      <li className="page-item">
+                        <a className="page-link" href="#">
                           2
                         </a>
                       </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">
+                      <li className="page-item">
+                        <a className="page-link" href="#">
                           3
                         </a>
                       </li>
-                      <li class="page-item">...</li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">
+                      <li className="page-item">...</li>
+                      <li className="page-item">
+                        <a className="page-link" href="#">
                           67
                         </a>
                       </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">
-                          <i class="fas fa-long-arrow-alt-right"></i>
+                      <li className="page-item">
+                        <a className="page-link" href="#">
+                          <i className="fas fa-long-arrow-alt-right"></i>
                         </a>
                       </li>
                     </ul>

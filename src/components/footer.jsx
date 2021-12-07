@@ -1,11 +1,11 @@
 import React from "react";
 const Footer = () => {
   return (
-    <footer class="footer-part">
-      <div class="container">
-        <div class="row newsletter">
-          <div class="col-lg-6">
-            <div class="news-content">
+    <footer className="footer-part">
+      <div className="container">
+        <div className="row newsletter">
+          <div className="col-lg-6">
+            <div className="news-content">
               <h2>Subscribe for Latest Offers</h2>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -14,35 +14,35 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div class="col-lg-6">
-            <form class="news-form">
+          <div className="col-lg-6">
+            <form className="news-form">
               <input type="text" placeholder="Enter Your Email Address" />
-              <button class="btn btn-inline">
-                <i class="fas fa-envelope"></i>
+              <button className="btn btn-inline">
+                <i className="fas fa-envelope"></i>
                 <span>Subscribe</span>
               </button>
             </form>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="footer-content">
+        <div className="row">
+          <div className="col-sm-6 col-md-6 col-lg-3">
+            <div className="footer-content">
               <h3>Contact Us</h3>
-              <ul class="footer-address">
+              <ul className="footer-address">
                 <li>
-                  <i class="fas fa-map-marker-alt"></i>
+                  <i className="fas fa-map-marker-alt"></i>
                   <p>
                     1420 West Jalkuri Fatullah, <span>Narayanganj, BD</span>
                   </p>
                 </li>
                 <li>
-                  <i class="fas fa-envelope"></i>
+                  <i className="fas fa-envelope"></i>
                   <p>
                     support@classicads.com <span>info@classicads.com</span>
                   </p>
                 </li>
                 <li>
-                  <i class="fas fa-phone-alt"></i>
+                  <i className="fas fa-phone-alt"></i>
                   <p>
                     +8801838288389 <span>+8801941101915</span>
                   </p>
@@ -50,10 +50,10 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="footer-content">
+          <div className="col-sm-6 col-md-6 col-lg-3">
+            <div className="footer-content">
               <h3>Quick Links</h3>
-              <ul class="footer-widget">
+              <ul className="footer-widget">
                 <li>
                   <a href="#!">Store Location</a>
                 </li>
@@ -72,10 +72,10 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="footer-content">
+          <div className="col-sm-6 col-md-6 col-lg-3">
+            <div className="footer-content">
               <h3>Information</h3>
-              <ul class="footer-widget">
+              <ul className="footer-widget">
                 <li>
                   <a href="#!">About Us</a>
                 </li>
@@ -94,12 +94,12 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="footer-info">
+          <div className="col-sm-6 col-md-6 col-lg-3">
+            <div className="footer-info">
               <a href="#!">
                 <img src="images/logo.png" alt="logo" />
               </a>
-              <ul class="footer-count">
+              <ul className="footer-count">
                 <li>
                   <h5>929,238</h5>
                   <p>Registered Users</p>
@@ -112,10 +112,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="footer-card-content">
-              <div class="footer-payment">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="footer-card-content">
+              <div className="footer-payment">
                 <a href="#!">
                   <img src="images/pay-card/01.jpg" alt="01" />
                 </a>
@@ -129,23 +129,23 @@ const Footer = () => {
                   <img src="images/pay-card/04.jpg" alt="04" />
                 </a>
               </div>
-              <div class="footer-option">
+              <div className="footer-option">
                 <button
                   type="button"
                   data-toggle="modal"
                   data-target="#language"
                 >
-                  <i class="fas fa-globe"></i>English
+                  <i className="fas fa-globe"></i>English
                 </button>
                 <button
                   type="button"
                   data-toggle="modal"
                   data-target="#currency"
                 >
-                  <i class="fas fa-dollar-sign"></i>USD
+                  <i className="fas fa-dollar-sign"></i>USD
                 </button>
               </div>
-              <div class="footer-app">
+              <div className="footer-app">
                 <a href="#!">
                   <img src="images/play-store.png" alt="play-store" />
                 </a>
@@ -157,52 +157,52 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div class="footer-end">
-        <div class="container">
-          <div class="footer-end-content">
+      <div className="footer-end">
+        <div className="container">
+          <div className="footer-end-content">
             <p>
               All Copyrights Reserved &copy; 2021 - Developed by{" "}
               <a href="#!">Mironcoder</a>
             </p>
-            <ul class="footer-social">
+            <ul className="footer-social">
               <li>
                 <a href="#!">
-                  <i class="fab fa-facebook-f"></i>
+                  <i className="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li>
                 <a href="#!">
-                  <i class="fab fa-twitter"></i>
+                  <i className="fab fa-twitter"></i>
                 </a>
               </li>
               <li>
                 <a href="#!">
-                  <i class="fab fa-linkedin-in"></i>
+                  <i className="fab fa-linkedin-in"></i>
                 </a>
               </li>
               <li>
                 <a href="#!">
-                  <i class="fab fa-google-plus-g"></i>
+                  <i className="fab fa-google-plus-g"></i>
                 </a>
               </li>
               <li>
                 <a href="#!">
-                  <i class="fab fa-youtube"></i>
+                  <i className="fab fa-youtube"></i>
                 </a>
               </li>
               <li>
                 <a href="#!">
-                  <i class="fab fa-pinterest-p"></i>
+                  <i className="fab fa-pinterest-p"></i>
                 </a>
               </li>
               <li>
                 <a href="#!">
-                  <i class="fab fa-instagram"></i>
+                  <i className="fab fa-instagram"></i>
                 </a>
               </li>
               <li>
                 <a href="#!">
-                  <i class="fab fa-dribbble"></i>
+                  <i className="fab fa-dribbble"></i>
                 </a>
               </li>
             </ul>

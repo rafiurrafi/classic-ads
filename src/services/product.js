@@ -170,7 +170,7 @@ export const productService = [
     status: "rental",
     isWishList: false,
     category: "electronics",
-    subcategory: "laptopdesktop",
+    subcategory: "laptop",
     price: 1210,
     location: "Uttara, Dhaka",
     description:
