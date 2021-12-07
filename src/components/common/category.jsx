@@ -1,17 +1,18 @@
 import React from "react";
 import categories from "../../services/categoryService";
+import { Link } from "react-router-dom";
 const CategoryHome = (props) => {
   return (
-    <section class="section suggest-part">
+    <section class="section suggest-part suggest-part-lg">
       <div class="container">
         <div class="suggest-slider slider-arrow row">
           {categories.map((category) => (
             <div className="col-4 col-md-3">
-              <a href="ad-list-column3.html" class="suggest-card">
+              <Link to={category.link} class="suggest-card">
                 <img src={category.icon} alt="car" />
                 <h6>{category.name}</h6>
                 <p>(4,521) ads</p>
-              </a>
+              </Link>
             </div>
           ))}
           {/* <a href="ad-list-column3.html" class="suggest-card">

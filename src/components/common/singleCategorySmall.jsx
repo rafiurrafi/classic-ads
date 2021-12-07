@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import SubcategorySmall from "./subcategorySmall";
-import useToggle from "../hooks/ustToggle";
 const SingleCategorySmall = ({ category }) => {
-  const [isOpenSub, setIsOpenSub] = useToggle(false);
+  const [isOpenSub, setIsOpenSub] = useState(false);
+  const closeSubcategory = () => {
+    setIsOpenSub(false);
+  };
   return (
-    <div className="col-3" onClick={setIsOpenSub}>
+    <div className="col-3" onClick={() => setIsOpenSub(true)}>
       <a className="suggest-card">
         <img src={category.icon} alt="car" />
         <h6>{category.name}</h6>
       </a>
       {isOpenSub && (
         <SubcategorySmall
+          title={category.name}
           subcategories={category.subcategory}
-          onIsOpenSub={setIsOpenSub}
+          onClose={closeSubcategory}
         />
       )}
     </div>

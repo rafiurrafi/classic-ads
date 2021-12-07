@@ -11,30 +11,35 @@ const categories = [
     name: "Mobile",
     icon: "images/suggest/automobile.png",
     numberOfAds: 21211,
+    link: "/ads/mobile",
     subcategory: [
       {
         _id: 1,
         icon: "images/suggest/automobile.png",
-        title: "Category 1 1",
+        title: "Mobile Phone",
         ads: 21211,
+        link: "/ads/mobile/phone",
       },
       {
         _id: 2,
         icon: "images/suggest/automobile.png",
-        title: "Category 1 2",
+        title: "Accessories",
         ads: 21211,
+        link: "/ads/mobile/accessories",
       },
       {
         _id: 3,
         icon: "images/suggest/automobile.png",
-        title: "Category 1 3",
+        title: "Sim card",
         ads: 21211,
+        link: "/ads/mobile/sim",
       },
       {
         _id: 4,
         icon: "images/suggest/automobile.png",
-        title: "Category 1 4",
+        title: "Wireless",
         ads: 21211,
+        link: "/ads/mobile/wireless",
       },
     ],
   },
@@ -43,30 +48,35 @@ const categories = [
     name: "Electronics",
     icon: "images/suggest/furniture.png",
     numberOfAds: 21211,
+    link: "/ads/electronics",
     subcategory: [
       {
         _id: 1,
         icon: "",
-        title: "Category 1 1",
+        title: "laptop",
         ads: 21211,
+        link: "/ads/electronics/laptop",
       },
       {
         _id: 2,
         icon: "images/suggest/furniture.png",
-        title: "Category 1 2",
+        title: "dektop",
         ads: 21211,
+        link: "/ads/electronics/desktop",
       },
       {
         _id: 3,
         icon: "images/suggest/furniture.png",
-        title: "Category 1 3",
+        title: "Accessories",
         ads: 21211,
+        link: "/ads/electronics/accessories",
       },
       {
         _id: 4,
         icon: "images/suggest/furniture.png",
-        title: "Category 1 4",
+        title: "Camera",
         ads: 21211,
+        link: "/ads/electronics/camera",
       },
     ],
   },
@@ -75,6 +85,7 @@ const categories = [
     name: "Home & Livings",
     icon: "images/suggest/properties.png",
     numberOfAds: 21211,
+    link: "/ads/home",
     subcategory: [
       {
         _id: 1,
@@ -99,6 +110,7 @@ const categories = [
         icon: "images/suggest/properties.png",
         title: "Category 1 4",
         ads: 21211,
+        link: "/ads/home",
       },
     ],
   },
@@ -107,6 +119,7 @@ const categories = [
     name: "Vehicles",
     icon: "images/suggest/electronics.png",
     numberOfAds: 21211,
+    link: "/ads/vehicles",
     subcategory: [
       {
         _id: 1,
@@ -131,6 +144,7 @@ const categories = [
         icon: "",
         title: "Category 1 4",
         ads: 21211,
+        link: "/ads/vehicles",
       },
     ],
   },
@@ -139,6 +153,7 @@ const categories = [
     name: "Property",
     icon: "images/suggest/hospitality.png",
     numberOfAds: 21211,
+    link: "/ads/property",
     subcategory: [
       {
         _id: 1,
@@ -163,6 +178,7 @@ const categories = [
         icon: "images/suggest/hospitality.png",
         title: "Category 1 4",
         ads: 21211,
+        link: "/ads/property",
       },
     ],
   },
@@ -171,6 +187,7 @@ const categories = [
     name: "Pet & Animale",
     icon: "images/suggest/gadgets.png",
     numberOfAds: 21211,
+    link: "/ads/pet",
     subcategory: [
       {
         _id: 1,
@@ -195,6 +212,7 @@ const categories = [
         icon: "images/suggest/food.png",
         title: "Category 1 4",
         ads: 21211,
+        link: "/ads/pet",
       },
     ],
   },
@@ -203,6 +221,7 @@ const categories = [
     name: "Fashion & Beauty",
     icon: "images/suggest/education.png",
     numberOfAds: 21211,
+    link: "/ads/fashion",
     subcategory: [
       {
         _id: 1,
@@ -251,6 +270,7 @@ const categories = [
         icon: "images/suggest/education.png",
         title: "Category 1 4",
         ads: 21211,
+        link: "/ads/fashion",
       },
     ],
   },
@@ -259,6 +279,7 @@ const categories = [
     name: "Hobbies, Sports & Kids",
     icon: "images/suggest/software.png",
     numberOfAds: 21211,
+    link: "/ads/hobbies",
     subcategory: [
       {
         _id: 1,
@@ -283,6 +304,7 @@ const categories = [
         icon: "images/suggest/software.png",
         title: "Category 1 4",
         ads: 21211,
+        link: "/ads/hobbies",
       },
     ],
   },
@@ -291,6 +313,7 @@ const categories = [
     name: "Industry & Business",
     icon: "images/suggest/food.png",
     numberOfAds: 21211,
+    link: "/ads/industry",
     subcategory: [
       {
         _id: 1,
@@ -315,6 +338,7 @@ const categories = [
         icon: "images/suggest/food.png",
         title: "Category 1 4",
         ads: 21211,
+        link: "/ads/industry",
       },
     ],
   },
@@ -323,30 +347,35 @@ const categories = [
     name: "Education",
     icon: "images/suggest/animals.png",
     numberOfAds: 21211,
+    link: "/ads/education",
     subcategory: [
       {
         _id: 1,
         icon: "images/suggest/animals.png",
         title: "Category 1 1",
         ads: 21211,
+        link: "/ads/education",
       },
       {
         _id: 2,
         icon: "images/suggest/animals.png",
         title: "Category 1 2",
         ads: 21211,
+        link: "/ads/education",
       },
       {
         _id: 3,
         icon: "images/suggest/animals.png",
         title: "Category 1 3",
         ads: 21211,
+        link: "/ads/education",
       },
       {
         _id: 4,
         icon: "images/suggest/animals.png",
         title: "Category 1 4",
         ads: 21211,
+        link: "/ads/education",
       },
     ],
   },
