@@ -12,7 +12,28 @@ import { productService } from "../../services/product";
 import AdListSingle from "../common/adListSingle";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-// import images
+import Pagination from "../common/pagination";
+//in future it will be revisit for performance
+const getProductByFilter = (products, pageSubcategory, pageCategory) => {
+  if (!pageSubcategory) {
+    const filteredProducts = products.filter(
+      (product) => product.category === pageCategory
+    );
+    return filteredProducts;
+  } else {
+    const filteredProducts = products.filter(
+      (product) => product.subcategory === pageSubcategory
+    );
+    return filteredProducts;
+  }
+};
+const getSpotlight = (products, pageCategory) => {
+  const filterSpotlight = products.filter(
+    (product) =>
+      product.category === pageCategory && product.priceType === "spotlight"
+  );
+  return filterSpotlight;
+};
 const AdListPage = (props) => {
   const settings = {
     className: "center",
@@ -26,32 +47,43 @@ const AdListPage = (props) => {
   };
   const { isOpenAside, onOpenAside, match } = props;
   const { category: pageCategory, subcategory: pageSubcategory } = match.params;
-  const [products, setProducts] = useState(productService);
-  const [spotlight, setSpotlight] = useState([]);
+  const [products, setProducts] = useState(() =>
+    getProductByFilter(productService, pageSubcategory, pageCategory)
+  );
+  const [spotlight, setSpotlight] = useState(() =>
+    getSpotlight(products, pageCategory)
+  );
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 1;
+
   //filter using category / subcategory
-  useEffect(() => {
-    if (!pageSubcategory) {
-      const filteredProducts = products.filter(
-        (product) => product.category === pageCategory
-      );
-      setProducts(filteredProducts);
-    } else {
-      const filteredProducts = products.filter(
-        (product) => product.subcategory === pageSubcategory
-      );
-      setProducts(filteredProducts);
-    }
-  }, [products, pageCategory, pageSubcategory]);
+  // useEffect(() => {
+  //   if (!pageSubcategory) {
+  //     const filteredProducts = products.filter(
+  //       (product) => product.category === pageCategory
+  //     );
+  //     setProducts(filteredProducts);
+  //   } else {
+  //     const filteredProducts = products.filter(
+  //       (product) => product.subcategory === pageSubcategory
+  //     );
+  //     setProducts(filteredProducts);
+  //   }
+  // }, [products, pageCategory, pageSubcategory]);
 
   //filter using spotlight feature
-  useEffect(() => {
-    const filterSpotlight = products.filter(
-      (product) =>
-        product.category === pageCategory && product.priceType === "spotlight"
-    );
-    setSpotlight(filterSpotlight);
-  }, [spotlight, pageCategory, products]);
+  // useEffect(() => {
+  //   const filterSpotlight = products.filter(
+  //     (product) =>
+  //       product.category === pageCategory && product.priceType === "spotlight"
+  //   );
+  //   setSpotlight(filterSpotlight);
+  // }, [pageCategory, products]);
 
+  //handle pagination
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
   return (
     <div>
       <SidebarProfile isOpenAside={isOpenAside} onOpenAside={onOpenAside} />
@@ -307,39 +339,12 @@ const AdListPage = (props) => {
                 <div className="col-lg-12">
                   <div className="footer-pagection">
                     <p className="page-info">Showing 12 of 60 Results</p>
-                    <ul className="pagination">
-                      <li className="page-item">
-                        <a className="page-link" href="#">
-                          <i className="fas fa-long-arrow-alt-left"></i>
-                        </a>
-                      </li>
-                      <li className="page-item">
-                        <a className="page-link active" href="#">
-                          1
-                        </a>
-                      </li>
-                      <li className="page-item">
-                        <a className="page-link" href="#">
-                          2
-                        </a>
-                      </li>
-                      <li className="page-item">
-                        <a className="page-link" href="#">
-                          3
-                        </a>
-                      </li>
-                      <li className="page-item">...</li>
-                      <li className="page-item">
-                        <a className="page-link" href="#">
-                          67
-                        </a>
-                      </li>
-                      <li className="page-item">
-                        <a className="page-link" href="#">
-                          <i className="fas fa-long-arrow-alt-right"></i>
-                        </a>
-                      </li>
-                    </ul>
+                    <Pagination
+                      itemsCount={products.length}
+                      pageSize={pageSize}
+                      currentPage={currentPage}
+                      onPageChange={handlePageChange}
+                    />
                   </div>
                 </div>
               </div>
