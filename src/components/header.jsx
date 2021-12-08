@@ -5,6 +5,7 @@ import user from "../images/user.png";
 import "../styles/header.scss";
 import "../styles/dropdown-cart.scss";
 import DropdownMessage from "./common/dropdownMessage";
+import { Link } from "react-router-dom";
 function Header(props) {
   const { onOpenAside } = props;
   return (
@@ -19,9 +20,9 @@ function Header(props) {
             >
               <i className="fas fa-align-left"></i>
             </button>
-            <a href="index.html" className="header-logo">
+            <Link to="/" className="header-logo">
               <img src={logo} alt="logo" />
-            </a>
+            </Link>
             <a href="user-form.html" className="header-widget header-user">
               <img src={user} alt="user" />
               <span>join me</span>

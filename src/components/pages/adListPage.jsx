@@ -62,6 +62,7 @@ const AdListPage = (props) => {
     setCurrentPage(page);
   };
   const productsToDisplay = paginate(products, currentPage, pageSize);
+  console.log(spotlight);
   return (
     <div>
       <SidebarProfile isOpenAside={isOpenAside} onOpenAside={onOpenAside} />
@@ -120,189 +121,52 @@ const AdListPage = (props) => {
                 <div className="col-lg-12">
                   <div className="ad-feature-slider ">
                     <Slider {...settings}>
-                      <div className="feature-card">
-                        <a href="#!" className="feature-img">
-                          <img
-                            src="../../images/product/10.jpg"
-                            alt="feature"
-                          />
-                        </a>
-                        <div className="cross-inline-badge feature-badge">
-                          <span>featured</span>
-                          <i className="fas fa-book-open"></i>
-                        </div>
-                        <button type="button" className="feature-wish">
-                          <i className="fas fa-heart"></i>
-                        </button>
-                        <div className="feature-content">
-                          <ol className="breadcrumb feature-category">
-                            <li>
-                              <span className="flat-badge rent">rent</span>
-                            </li>
-                            <li className="breadcrumb-item">
-                              <a href="#!">automobile</a>
-                            </li>
-                            <li
-                              className="breadcrumb-item active"
-                              aria-current="page"
-                            >
-                              private car
-                            </li>
-                          </ol>
-                          <h3 className="feature-title">
-                            <a href="ad-details-left.html">
-                              Unde eveniet ducimus nostrum maiores soluta
-                              temporibus ipsum dolor sit amet.
-                            </a>
-                          </h3>
-                          <div className="feature-meta">
-                            <span className="feature-price">
-                              $1200<small>/Monthly</small>
-                            </span>
-                            <span className="feature-time">
-                              <i className="fas fa-clock"></i>56 minute ago
-                            </span>
+                      {spotlight.map((light) => (
+                        <div key={light._id} className="feature-card">
+                          <a href="#!" className="feature-img">
+                            <img src={`../../${light.img}`} alt="feature" />
+                          </a>
+                          <div className="cross-inline-badge feature-badge">
+                            <span>featured</span>
+                            <i className="fas fa-book-open"></i>
                           </div>
-                        </div>
-                      </div>
-
-                      <div className="feature-card">
-                        <a href="#!" className="feature-img">
-                          <img
-                            src="../../images/product/01.jpg"
-                            alt="feature"
-                          />
-                        </a>
-                        <div className="cross-inline-badge feature-badge">
-                          <span>featured</span>
-                          <i className="fas fa-book-open"></i>
-                        </div>
-                        <button type="button" className="feature-wish">
-                          <i className="fas fa-heart"></i>
-                        </button>
-                        <div className="feature-content">
-                          <ol className="breadcrumb feature-category">
-                            <li>
-                              <span className="flat-badge booking">
-                                booking
+                          <button type="button" className="feature-wish">
+                            <i className="fas fa-heart"></i>
+                          </button>
+                          <div className="feature-content">
+                            <ol className="breadcrumb feature-category">
+                              <li>
+                                <span className="flat-badge rent">rent</span>
+                              </li>
+                              <li className="breadcrumb-item">
+                                <a href="#!">automobile</a>
+                              </li>
+                              <li
+                                className="breadcrumb-item active"
+                                aria-current="page"
+                              >
+                                private car
+                              </li>
+                            </ol>
+                            <h3 className="feature-title">
+                              <a href="ad-details-left.html">
+                                Unde eveniet ducimus nostrum maiores soluta
+                                temporibus ipsum dolor sit amet.
+                              </a>
+                            </h3>
+                            <div className="feature-meta">
+                              <span className="feature-price">
+                                ${light.price}
+                                <small>/Monthly</small>
                               </span>
-                            </li>
-                            <li className="breadcrumb-item">
-                              <a href="#!">Property</a>
-                            </li>
-                            <li
-                              className="breadcrumb-item active"
-                              aria-current="page"
-                            >
-                              House
-                            </li>
-                          </ol>
-                          <h3 className="feature-title">
-                            <a href="ad-details-left.html">
-                              Unde eveniet ducimus nostrum maiores soluta
-                              temporibus ipsum dolor sit amet.
-                            </a>
-                          </h3>
-                          <div className="feature-meta">
-                            <span className="feature-price">
-                              $800<small>/perday</small>
-                            </span>
-                            <span className="feature-time">
-                              <i className="fas fa-clock"></i>56 minute ago
-                            </span>
+                              <span className="feature-time">
+                                <i className="fas fa-clock"></i>
+                                {light.time} minute ago
+                              </span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div className="feature-card">
-                        <a href="#!" className="feature-img">
-                          <img
-                            src="../../images/product/08.jpg"
-                            alt="feature"
-                          />
-                        </a>
-                        <div className="cross-inline-badge feature-badge">
-                          <span>featured</span>
-                          <i className="fas fa-book-open"></i>
-                        </div>
-                        <button type="button" className="feature-wish">
-                          <i className="fas fa-heart"></i>
-                        </button>
-                        <div className="feature-content">
-                          <ol className="breadcrumb feature-category">
-                            <li>
-                              <span className="flat-badge sale">sale</span>
-                            </li>
-                            <li className="breadcrumb-item">
-                              <a href="#!">gadget</a>
-                            </li>
-                            <li
-                              className="breadcrumb-item active"
-                              aria-current="page"
-                            >
-                              iphone
-                            </li>
-                          </ol>
-                          <h3 className="feature-title">
-                            <a href="ad-details-left.html">
-                              Unde eveniet ducimus nostrum maiores soluta
-                              temporibus ipsum dolor sit amet.
-                            </a>
-                          </h3>
-                          <div className="feature-meta">
-                            <span className="feature-price">
-                              $1150<small>/Negotiable</small>
-                            </span>
-                            <span className="feature-time">
-                              <i className="fas fa-clock"></i>56 minute ago
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="feature-card">
-                        <a href="#!" className="feature-img">
-                          <img
-                            src="../../images/product/06.jpg"
-                            alt="feature"
-                          />
-                        </a>
-                        <div className="cross-inline-badge feature-badge">
-                          <span>featured</span>
-                          <i className="fas fa-book-open"></i>
-                        </div>
-                        <button type="button" className="feature-wish">
-                          <i className="fas fa-heart"></i>
-                        </button>
-                        <div className="feature-content">
-                          <ol className="breadcrumb feature-category">
-                            <li>
-                              <span className="flat-badge sale">sale</span>
-                            </li>
-                            <li className="breadcrumb-item">
-                              <a href="#!">automobile</a>
-                            </li>
-                            <li
-                              className="breadcrumb-item active"
-                              aria-current="page"
-                            >
-                              cycle
-                            </li>
-                          </ol>
-                          <h3 className="feature-title">
-                            <a href="ad-details-left.html">
-                              Unde eveniet ducimus nostrum maiores soluta
-                              temporibus ipsum dolor sit amet.
-                            </a>
-                          </h3>
-                          <div className="feature-meta">
-                            <span className="feature-price">
-                              $455<small>/fixed</small>
-                            </span>
-                            <span className="feature-time">
-                              <i className="fas fa-clock"></i>56 minute ago
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      ))}
                     </Slider>
                   </div>
                 </div>
