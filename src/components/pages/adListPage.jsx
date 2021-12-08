@@ -13,6 +13,7 @@ import AdListSingle from "../common/adListSingle";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import Pagination from "../common/pagination";
+import { paginate } from "../../utils/paginatie";
 //in future it will be revisit for performance
 const getProductByFilter = (products, pageSubcategory, pageCategory) => {
   if (!pageSubcategory) {
@@ -60,6 +61,7 @@ const AdListPage = (props) => {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+  const productsToDisplay = paginate(products, currentPage, pageSize);
   return (
     <div>
       <SidebarProfile isOpenAside={isOpenAside} onOpenAside={onOpenAside} />
@@ -306,15 +308,16 @@ const AdListPage = (props) => {
                 </div>
               </div>
               <div className="row ad-standard">
-                {products.map((product, index) => {
-                  if (index > 5) return null;
-                  return <AdListSingle key={product._id} ads={product} />;
-                })}
+                {productsToDisplay.map((product) => (
+                  <AdListSingle key={product._id} ads={product} />
+                ))}
               </div>
               <div className="row">
                 <div className="col-lg-12">
                   <div className="footer-pagection">
-                    <p className="page-info">Showing 12 of 60 Results</p>
+                    <p className="page-info">
+                      Showing {pageSize} of {products.length} Results
+                    </p>
                     <Pagination
                       itemsCount={products.length}
                       pageSize={pageSize}
