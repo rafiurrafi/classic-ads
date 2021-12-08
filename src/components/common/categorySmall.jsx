@@ -9,7 +9,7 @@ const CategorySmall = (props) => {
       <div className="container">
         <div className="suggest-slider slider-arrow row">
           {categories.map((category) => (
-            <SingleCategorySmall category={category} />
+            <SingleCategorySmall key={category._id} category={category} />
           ))}
         </div>
         {/* end of suggest slider  */}

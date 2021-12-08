@@ -56,30 +56,6 @@ const AdListPage = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 1;
 
-  //filter using category / subcategory
-  // useEffect(() => {
-  //   if (!pageSubcategory) {
-  //     const filteredProducts = products.filter(
-  //       (product) => product.category === pageCategory
-  //     );
-  //     setProducts(filteredProducts);
-  //   } else {
-  //     const filteredProducts = products.filter(
-  //       (product) => product.subcategory === pageSubcategory
-  //     );
-  //     setProducts(filteredProducts);
-  //   }
-  // }, [products, pageCategory, pageSubcategory]);
-
-  //filter using spotlight feature
-  // useEffect(() => {
-  //   const filterSpotlight = products.filter(
-  //     (product) =>
-  //       product.category === pageCategory && product.priceType === "spotlight"
-  //   );
-  //   setSpotlight(filterSpotlight);
-  // }, [pageCategory, products]);
-
   //handle pagination
   const handlePageChange = (page) => {
     setCurrentPage(page);

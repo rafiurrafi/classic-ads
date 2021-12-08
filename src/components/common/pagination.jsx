@@ -8,7 +8,11 @@ const Pagination = (props) => {
     <ul className="pagination">
       {currentPage > 1 && (
         <li className="page-item">
-          <a className="page-link" href="#!">
+          <a
+            className="page-link"
+            href="#!"
+            onClick={() => onPageChange(currentPage - 1)}
+          >
             <i className="fas fa-long-arrow-alt-left"></i>
           </a>
         </li>
@@ -27,7 +31,11 @@ const Pagination = (props) => {
 
       {currentPage < pagesCount && (
         <li className="page-item">
-          <a className="page-link" href="#!">
+          <a
+            className="page-link"
+            href="#!"
+            onClick={() => onPageChange(currentPage + 1)}
+          >
             <i className="fas fa-long-arrow-alt-right"></i>
           </a>
         </li>
