@@ -38,13 +38,11 @@ const getSpotlight = (products, pageCategory) => {
 const AdListPage = (props) => {
   const settings = {
     className: "center",
-    centerMode: true,
     infinite: true,
-    centerPadding: "60px",
     slidesToShow: 1,
-    speed: 500,
-    autoplay: true,
-    autoplaySpeed: 1000,
+    speed: 1000,
+    // autoplay: true,
+    autoplaySpeed: 2000,
   };
   const { isOpenAside, onOpenAside, match } = props;
   const { category: pageCategory, subcategory: pageSubcategory } = match.params;
@@ -55,14 +53,19 @@ const AdListPage = (props) => {
     getSpotlight(products, pageCategory)
   );
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 1;
+  const pageSize = 2;
+  //filter items
+  const [priceRange, setPriceRange] = useState([]);
 
   //handle pagination
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+  const handlePriceRange = (range) => {
+    setPriceRange(range);
+    console.log(range);
+  };
   const productsToDisplay = paginate(products, currentPage, pageSize);
-  console.log(spotlight);
   return (
     <div>
       <SidebarProfile isOpenAside={isOpenAside} onOpenAside={onOpenAside} />
@@ -74,7 +77,7 @@ const AdListPage = (props) => {
             <div className="col-lg-4 col-xl-3">
               <div className="row">
                 <div className="col-md-6 col-lg-12">
-                  <FilterPrice />
+                  <FilterPrice onPriceChage={handlePriceRange} />
                 </div>
                 <div className="col-md-6 col-lg-12">
                   <FilterType />
