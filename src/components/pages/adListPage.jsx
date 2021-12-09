@@ -63,9 +63,17 @@ const AdListPage = (props) => {
   };
   const handlePriceRange = (range) => {
     setPriceRange(range);
-    console.log(range);
   };
-  const productsToDisplay = paginate(products, currentPage, pageSize);
+
+  //filter using price
+  let filteredProducts = [...products];
+  if (priceRange.length > 1)
+    filteredProducts = products.filter(
+      (product) =>
+        product.price >= priceRange[0] && product.price <= priceRange[1]
+    );
+  // paginate item
+  let productsToDisplay = paginate(filteredProducts, currentPage, pageSize);
   return (
     <div>
       <SidebarProfile isOpenAside={isOpenAside} onOpenAside={onOpenAside} />
@@ -122,7 +130,7 @@ const AdListPage = (props) => {
               </div>
               <div className="row">
                 <div className="col-lg-12">
-                  <div className="ad-feature-slider ">
+                  {/* <div className="ad-feature-slider ">
                     <Slider {...settings}>
                       {spotlight.map((light) => (
                         <div key={light._id} className="feature-card">
@@ -171,7 +179,7 @@ const AdListPage = (props) => {
                         </div>
                       ))}
                     </Slider>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="row ad-standard">
@@ -179,21 +187,23 @@ const AdListPage = (props) => {
                   <AdListSingle key={product._id} ads={product} />
                 ))}
               </div>
-              <div className="row">
-                <div className="col-lg-12">
-                  <div className="footer-pagection">
-                    <p className="page-info">
-                      Showing {pageSize} of {products.length} Results
-                    </p>
-                    <Pagination
-                      itemsCount={products.length}
-                      pageSize={pageSize}
-                      currentPage={currentPage}
-                      onPageChange={handlePageChange}
-                    />
+              {!!productsToDisplay.length && (
+                <div className="row">
+                  <div className="col-lg-12">
+                    <div className="footer-pagection">
+                      <p className="page-info">
+                        Showing {pageSize} of {filteredProducts.length} Results
+                      </p>
+                      <Pagination
+                        itemsCount={filteredProducts.length}
+                        pageSize={pageSize}
+                        currentPage={currentPage}
+                        onPageChange={handlePageChange}
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>

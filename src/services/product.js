@@ -10,7 +10,7 @@ export const productService = [
     isWishList: false,
     category: "mobile",
     subcategory: "phone",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
@@ -26,7 +26,7 @@ export const productService = [
     isWishList: false,
     category: "electronics",
     subcategory: "laptop",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
@@ -42,7 +42,7 @@ export const productService = [
     isWishList: false,
     category: "mobile",
     subcategory: "sim",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
@@ -58,7 +58,7 @@ export const productService = [
     isWishList: false,
     category: "electronics",
     subcategory: "desktop",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
@@ -74,7 +74,7 @@ export const productService = [
     isWishList: false,
     category: "mobile",
     subcategory: "phone",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
@@ -90,7 +90,7 @@ export const productService = [
     isWishList: false,
     category: "electronics",
     subcategory: "laptop",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
@@ -107,7 +107,7 @@ export const productService = [
     isWishList: false,
     category: "electronics",
     subcategory: "laptop",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
@@ -123,7 +123,7 @@ export const productService = [
     isWishList: false,
     category: "mobile",
     subcategory: "sim",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
@@ -139,7 +139,7 @@ export const productService = [
     isWishList: false,
     category: "electronics",
     subcategory: "desktop",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
@@ -155,7 +155,7 @@ export const productService = [
     isWishList: false,
     category: "mobile",
     subcategory: "phone",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
@@ -171,7 +171,7 @@ export const productService = [
     isWishList: false,
     category: "electronics",
     subcategory: "laptop",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
@@ -187,7 +187,7 @@ export const productService = [
     isWishList: false,
     category: "mobile",
     subcategory: "sim",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
@@ -203,7 +203,7 @@ export const productService = [
     isWishList: false,
     category: "electronics",
     subcategory: "desktop",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
@@ -219,7 +219,7 @@ export const productService = [
     isWishList: false,
     category: "mobile",
     subcategory: "phone",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
@@ -235,7 +235,7 @@ export const productService = [
     isWishList: false,
     category: "electronics",
     subcategory: "desktop",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
@@ -251,7 +251,7 @@ export const productService = [
     isWishList: false,
     category: "mobile",
     subcategory: "sim",
-    price: 1210,
+    price: 9,
     location: "Uttara, Dhaka",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",

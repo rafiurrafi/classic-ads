@@ -8,7 +8,7 @@ import "./styles/app.scss";
 import { Switch, Route } from "react-router-dom";
 import AdListPage from "./components/pages/adListPage";
 import "bootstrap/dist/css/bootstrap.css";
-import "font-awesome/css/font-awesome.min.css";
+import "font-awesome/css/font-awesome.css";
 function App() {
   const [isOpenAside, setIsOpenAside] = useToggle(false);
   useEffect(() => {
