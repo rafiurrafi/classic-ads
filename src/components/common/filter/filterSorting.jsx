@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
-const FilterSorting = () => {
+const FilterSorting = ({ onAsc }) => {
+  const [isAsc, setIsAsc] = useState("none");
+  const handleChange = (e) => {
+    setIsAsc(e.target.value);
+    onAsc(e.target.value);
+  };
   return (
     <div className="product-widget">
       <h6 className="product-widget-title">Filter by Sorting</h6>
       <form className="product-widget-form">
-        <select className="custom-select filter-select">
+        <select
+          className="custom-select filter-select"
+          value={isAsc}
+          onChange={handleChange}
+        >
           <option selected>default</option>
-          <option value="3">trending</option>
-          <option value="1">featured</option>
-          <option value="2">recommend</option>
+          <option value="asc">Lowest to highest</option>
+          <option value="desc">highest to Lowest</option>
         </select>
-        <button type="submit" className="product-widget-btn">
-          <i className="fas fa-broom"></i>
-          <span>Clear Filter</span>
-        </button>
       </form>
     </div>
   );

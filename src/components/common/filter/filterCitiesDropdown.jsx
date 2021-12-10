@@ -7,7 +7,6 @@ const FilterCitiesDropdown = ({ location }) => {
     backgroundColor: "red",
     transition: "maxHeight .5s",
   };
-  console.log(location);
   return (
     <>
       <li className="product-widget-item">

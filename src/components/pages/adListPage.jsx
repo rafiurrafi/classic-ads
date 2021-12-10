@@ -14,6 +14,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import Pagination from "../common/pagination";
 import { paginate } from "../../utils/paginatie";
+import FilterSorting from "../common/filter/filterSorting";
 
 //in future it will be revisit for performance
 const getProductByFilter = (products, pageSubcategory, pageCategory) => {
@@ -53,6 +54,7 @@ const AdListPage = (props) => {
   const [spotlight, setSpotlight] = useState(() =>
     getSpotlight(products, pageCategory)
   );
+  const [isSorted, setIsSorted] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 1;
   //filter items
@@ -62,9 +64,13 @@ const AdListPage = (props) => {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+  //helper functions
   const handlePriceRange = (range) => {
     setPriceRange(range);
     setCurrentPage(1);
+  };
+  const handleSorting = (sort) => {
+    setIsSorted(sort);
   };
 
   //filter using price
@@ -77,9 +83,13 @@ const AdListPage = (props) => {
       (product) =>
         product.price >= priceRange[0] && product.price <= priceRange[1]
     );
+  //filter using ascending/descending
+  if (!!isSorted && isSorted === "asc")
+    filteredProducts.sort((a, b) => a.price - b.price);
+  else if (!!isSorted && isSorted === "desc")
+    filteredProducts.sort((a, b) => -a.price + b.price);
   // paginate item
   let productsToDisplay = paginate(filteredProducts, currentPage, pageSize);
-  console.log(productsToDisplay);
   return (
     <div>
       <SidebarProfile isOpenAside={isOpenAside} onOpenAside={onOpenAside} />
@@ -95,6 +105,9 @@ const AdListPage = (props) => {
                 </div>
                 <div className="col-md-6 col-lg-12">
                   <FilterType />
+                </div>
+                <div className="col-md-6 col-lg-12">
+                  <FilterSorting onAsc={handleSorting} />
                 </div>
                 <div className="col-md-6 col-lg-12">
                   <FilterRating />

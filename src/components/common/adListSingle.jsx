@@ -6,7 +6,7 @@ const AdListSingle = ({ ads }) => {
       <div className="product-card standard">
         <div className="product-media">
           <div className="product-img">
-            <img src="../../../images/product/07.jpg" alt="product" />
+            <img src={`../../../${ads.img}`} alt="product" />
           </div>
           <div className="cross-vertical-badge product-badge">
             <i className="fas fa-clipboard-check"></i>
@@ -58,7 +58,8 @@ const AdListSingle = ({ ads }) => {
           </div>
           <div className="product-info">
             <h5 className="product-price">
-              $1590<span>/per week</span>
+              ${ads.price}
+              <span>/per week</span>
             </h5>
             <div className="product-btn">
               <a
