@@ -14,6 +14,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import Pagination from "../common/pagination";
 import { paginate } from "../../utils/paginatie";
+
 //in future it will be revisit for performance
 const getProductByFilter = (products, pageSubcategory, pageCategory) => {
   if (!pageSubcategory) {
@@ -99,7 +100,7 @@ const AdListPage = (props) => {
                   <FilterRating />
                 </div>
                 <div className="col-md-6 col-lg-12">
-                  <FilterCities />
+                  <FilterCities products={filteredProducts} />
                 </div>
                 <div className="col-md-6 col-lg-12">
                   <FilterPopularity />
@@ -110,29 +111,6 @@ const AdListPage = (props) => {
               </div>
             </div>
             <div className="col-lg-8 col-xl-9">
-              <div className="row">
-                <div className="col-lg-12">
-                  <div className="header-filter">
-                    <div className="filter-show">
-                      <label className="filter-label">Show :</label>
-                      <select className="custom-select filter-select">
-                        <option value="1">12</option>
-                        <option value="2">24</option>
-                        <option value="3">36</option>
-                      </select>
-                    </div>
-                    <div className="filter-short">
-                      <label className="filter-label">Short by :</label>
-                      <select className="custom-select filter-select">
-                        <option selected>default</option>
-                        <option value="3">trending</option>
-                        <option value="1">featured</option>
-                        <option value="2">recommend</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div className="row">
                 <div className="col-lg-12">
                   {/* <div className="ad-feature-slider ">
