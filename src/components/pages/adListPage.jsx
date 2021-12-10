@@ -53,7 +53,7 @@ const AdListPage = (props) => {
     getSpotlight(products, pageCategory)
   );
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 2;
+  const pageSize = 1;
   //filter items
   const [priceRange, setPriceRange] = useState([]);
 
@@ -63,17 +63,22 @@ const AdListPage = (props) => {
   };
   const handlePriceRange = (range) => {
     setPriceRange(range);
+    setCurrentPage(1);
   };
 
   //filter using price
   let filteredProducts = [...products];
-  if (priceRange.length > 1)
-    filteredProducts = products.filter(
+  // filteredProducts = filteredProducts.filter(
+  //   (product) => product.price >= 10 && product.price <= 100
+  // );
+  if (priceRange.length > 0)
+    filteredProducts = filteredProducts.filter(
       (product) =>
         product.price >= priceRange[0] && product.price <= priceRange[1]
     );
   // paginate item
   let productsToDisplay = paginate(filteredProducts, currentPage, pageSize);
+  console.log(productsToDisplay);
   return (
     <div>
       <SidebarProfile isOpenAside={isOpenAside} onOpenAside={onOpenAside} />
@@ -187,7 +192,7 @@ const AdListPage = (props) => {
                   <AdListSingle key={product._id} ads={product} />
                 ))}
               </div>
-              {!!productsToDisplay.length && (
+              {!!filteredProducts.length && (
                 <div className="row">
                   <div className="col-lg-12">
                     <div className="footer-pagection">
