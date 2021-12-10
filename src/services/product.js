@@ -16,6 +16,7 @@ export const productService = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
     time: "40",
     priceType: "spotlight",
+    locationArea: { location: "Dhaka", city: "Banani" },
   },
   {
     _id: 2,
@@ -32,6 +33,7 @@ export const productService = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
     time: "40",
     priceType: "free",
+    locationArea: { location: "Dhaka", city: "Dhanmandi" },
   },
   {
     _id: 3,
@@ -48,6 +50,7 @@ export const productService = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
     time: "40",
     priceType: "featured",
+    locationArea: { location: "Dhaka", city: "Banani" },
   },
   {
     _id: 4,
@@ -64,6 +67,7 @@ export const productService = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
     time: "40",
     priceType: "spotlight",
+    locationArea: { location: "Dhaka", city: "Mohammadpur" },
   },
   {
     _id: 5,
@@ -80,6 +84,7 @@ export const productService = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
     time: "40",
     priceType: "free",
+    locationArea: { location: "Dhaka", city: "Banani" },
   },
   {
     _id: 6,
@@ -97,6 +102,7 @@ export const productService = [
     time: "40",
     package: "spotlight",
     priceType: "featured",
+    locationArea: { location: "Dhaka", city: "Banani" },
   },
   {
     _id: 7,
@@ -113,6 +119,7 @@ export const productService = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
     time: "40",
     priceType: "spotlight",
+    locationArea: { location: "Dhaka", city: "Mohammadpur" },
   },
   {
     _id: 8,
@@ -129,6 +136,7 @@ export const productService = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
     time: "40",
     priceType: "featured",
+    locationArea: { location: "Dhaka", city: "Banani" },
   },
   {
     _id: 9,
@@ -145,6 +153,7 @@ export const productService = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
     time: "40",
     priceType: "spotlight",
+    locationArea: { location: "Dhaka", city: "Dhanmondi" },
   },
   {
     _id: 10,
@@ -177,6 +186,7 @@ export const productService = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
     time: "40",
     priceType: "free",
+    locationArea: { location: "Rangpur", city: "Dinajpur" },
   },
   {
     _id: 12,
@@ -193,6 +203,7 @@ export const productService = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
     time: "40",
     priceType: "featured",
+    locationArea: { location: "Rangpur", city: "Dinajpur" },
   },
   {
     _id: 13,
@@ -209,6 +220,7 @@ export const productService = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
     time: "40",
     priceType: "free",
+    locationArea: { location: "Chittagong", city: "Rangamati" },
   },
   {
     _id: 14,
@@ -225,6 +237,7 @@ export const productService = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
     time: "40",
     priceType: "spotlight",
+    locationArea: { location: "Chittagong", city: "Rangamati" },
   },
   {
     _id: 15,
@@ -241,6 +254,7 @@ export const productService = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
     time: "40",
     priceType: "featured",
+    locationArea: { location: "Chittagong", city: "Khagrachari" },
   },
   {
     _id: 16,
@@ -257,5 +271,6 @@ export const productService = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam debitis in sequi.",
     time: "40",
     priceType: "free",
+    locationArea: { location: "Chittagong", city: "Khagrachari" },
   },
 ];
