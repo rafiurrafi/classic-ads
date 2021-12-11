@@ -1,4 +1,5 @@
 import _ from "lodash";
+import * as Fa from "react-icons/fa";
 const Pagination = (props) => {
   const { itemsCount, pageSize, currentPage, onPageChange } = props;
   const pagesCount = Math.ceil(itemsCount / pageSize);
@@ -7,36 +8,39 @@ const Pagination = (props) => {
   return (
     <ul className="pagination">
       {currentPage > 1 && (
-        <li className="page-item">
+        <li className="page-item page-item-first-child">
           <a
             className="page-link"
             href="#!"
             onClick={() => onPageChange(currentPage - 1)}
           >
-            <i className="fas fa-long-arrow-alt-left"></i>
+            <Fa.FaLongArrowAltLeft />
           </a>
         </li>
       )}
       {pages.map((page) => (
-        <li key={page} className="page-item">
-          <a
-            className={currentPage === page ? "page-link active" : "page-link"}
-            href="#!"
-            onClick={() => onPageChange(page)}
-          >
-            {page}
-          </a>
-        </li>
+        <>
+          <li key={page} className="page-item">
+            <a
+              className={
+                currentPage === page ? "page-link active" : "page-link"
+              }
+              href="#!"
+              onClick={() => onPageChange(page)}
+            >
+              {page}
+            </a>
+          </li>
+        </>
       ))}
-
       {currentPage < pagesCount && (
-        <li className="page-item">
+        <li className="page-item page-item-last-child">
           <a
             className="page-link"
             href="#!"
             onClick={() => onPageChange(currentPage + 1)}
           >
-            <i className="fas fa-long-arrow-alt-right"></i>
+            <Fa.FaLongArrowAltRight />
           </a>
         </li>
       )}

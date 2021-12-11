@@ -54,11 +54,12 @@ const AdListPage = (props) => {
   const [spotlight, setSpotlight] = useState(() =>
     getSpotlight(products, pageCategory)
   );
-  const [isSorted, setIsSorted] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 1;
   //filter items
   const [priceRange, setPriceRange] = useState([]);
+  const [isSorted, setIsSorted] = useState("");
+  const [bookingType, setBookingType] = useState([]);
 
   //handle pagination
   const handlePageChange = (page) => {
@@ -72,12 +73,12 @@ const AdListPage = (props) => {
   const handleSorting = (sort) => {
     setIsSorted(sort);
   };
+  const handleFilterType = (type) => {
+    setBookingType(type);
+  };
 
   //filter using price
   let filteredProducts = [...products];
-  // filteredProducts = filteredProducts.filter(
-  //   (product) => product.price >= 10 && product.price <= 100
-  // );
   if (priceRange.length > 0)
     filteredProducts = filteredProducts.filter(
       (product) =>
@@ -88,6 +89,13 @@ const AdListPage = (props) => {
     filteredProducts.sort((a, b) => a.price - b.price);
   else if (!!isSorted && isSorted === "desc")
     filteredProducts.sort((a, b) => -a.price + b.price);
+  //filter using booking type
+  if (bookingType.length > 0) {
+    filteredProducts = filteredProducts.filter((product) =>
+      bookingType.includes(product.status)
+    );
+  }
+
   // paginate item
   let productsToDisplay = paginate(filteredProducts, currentPage, pageSize);
   return (
@@ -104,7 +112,7 @@ const AdListPage = (props) => {
                   <FilterPrice onPriceChage={handlePriceRange} />
                 </div>
                 <div className="col-md-6 col-lg-12">
-                  <FilterType />
+                  <FilterType onType={handleFilterType} />
                 </div>
                 <div className="col-md-6 col-lg-12">
                   <FilterSorting onAsc={handleSorting} />
