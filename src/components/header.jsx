@@ -6,6 +6,7 @@ import "../styles/header.scss";
 import "../styles/dropdown-cart.scss";
 import DropdownMessage from "./common/dropdownMessage";
 import { Link } from "react-router-dom";
+import * as Fa from "react-icons/fa";
 function Header(props) {
   const { onOpenAside } = props;
   return (
@@ -18,7 +19,7 @@ function Header(props) {
               className="header-widget sidebar-btn"
               onClick={onOpenAside}
             >
-              <i className="fas fa-align-left"></i>
+              <Fa.FaAlignLeft />
             </button>
             <Link to="/" className="header-logo">
               <img src={logo} alt="logo" />

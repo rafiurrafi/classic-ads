@@ -9,6 +9,7 @@ import { Switch, Route } from "react-router-dom";
 import AdListPage from "./components/pages/adListPage";
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.css";
+import SingleAdsPage from "./components/pages/singleAdsPage";
 function App() {
   const [isOpenAside, setIsOpenAside] = useToggle(false);
   useEffect(() => {
@@ -25,6 +26,16 @@ function App() {
     <div className="App">
       <Header onOpenAside={setIsOpenAside} />
       <Switch>
+        <Route
+          path="/ads/single/:id"
+          render={(props) => (
+            <SingleAdsPage
+              isOpenAside={isOpenAside}
+              onOpenAside={setIsOpenAside}
+              {...props}
+            />
+          )}
+        />
         <Route
           path="/ads/:category?/:subcategory?"
           render={(props) => (
