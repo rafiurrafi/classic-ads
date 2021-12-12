@@ -3,7 +3,32 @@ import SidebarProfile from "../sidebarProfile";
 import MobileNav from "../common/mobileNav";
 import SingleBanner from "../common/singleBanner";
 import "../../styles/singleAdsPage.scss";
+import CommonCard from "../common/hoc/commonCard";
+import * as Fa from "react-icons/fa";
+import Slider from "react-slick";
+
+import product1 from "../../images/product/10.jpg";
+import product2 from "../../images/product/01.jpg";
+import product3 from "../../images/product/08.jpg";
+import product4 from "../../images/product/06.jpg";
 const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
+  const baseUrl = "../../images/product";
+  const settings = {
+    dots: true,
+    dotsClass: "slick-dots slick-thumb",
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    customPaging: function (i) {
+      return (
+        <a>
+          {/* <img src={`${baseUrl}/abstract0${i + 1}.jpg`} /> */}
+          <img src={`${baseUrl}/0${i + 1}.jpg`} />
+        </a>
+      );
+    },
+  };
   return (
     <div className="Single-ads-page">
       <SidebarProfile isOpenAside={isOpenAside} onOpenAside={onOpenAside} />
@@ -14,25 +39,19 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
           <div class="row content-reverse">
             <div class="col-lg-4">
               {/* <!-- PRICE CARD --> */}
-              <div class="common-card price">
+              <CommonCard cardType="price">
                 <h3>
                   $2347<span>/negotiable</span>
                 </h3>
-                <i class="fas fa-tag"></i>
-              </div>
-
+                <Fa.FaTags />
+              </CommonCard>
               {/* <!-- NUMBER CARD --> */}
-              <button
-                type="button"
-                class="common-card number"
-                data-toggle="modal"
-                data-target="#number"
-              >
+              <CommonCard cardType="number">
                 <h3>
                   (+880)<span>Click to show</span>
                 </h3>
-                <i class="fas fa-phone"></i>
-              </button>
+                <Fa.FaPhoneAlt />
+              </CommonCard>
 
               {/* <!-- AUTHOR CARD --> */}
               <div class="common-card">
@@ -41,7 +60,7 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
                 </div>
                 <div class="ad-details-author">
                   <a href="#" class="author-img active">
-                    <img src="images/avatar/01.jpg" alt="avatar" />
+                    <img src="../../images/avatar/01.jpg" alt="avatar" />
                   </a>
                   <div class="author-meta">
                     <h4>
@@ -172,7 +191,7 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
                 <div class="ad-details-feature slider-arrow">
                   <div class="feature-card">
                     <a href="#" class="feature-img">
-                      <img src="images/product/10.jpg" alt="feature" />
+                      <img src="../../images/product/10.jpg" alt="feature" />
                     </a>
                     <div class="cross-inline-badge feature-badge">
                       <span>featured</span>
@@ -211,7 +230,7 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
                   </div>
                   <div class="feature-card">
                     <a href="#" class="feature-img">
-                      <img src="images/product/01.jpg" alt="feature" />
+                      <img src="../../images/product/01.jpg" alt="feature" />
                     </a>
                     <div class="cross-inline-badge feature-badge">
                       <span>featured</span>
@@ -250,7 +269,7 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
                   </div>
                   <div class="feature-card">
                     <a href="#" class="feature-img">
-                      <img src="images/product/08.jpg" alt="feature" />
+                      <img src="../../images/product/08.jpg" alt="feature" />
                     </a>
                     <div class="cross-inline-badge feature-badge">
                       <span>featured</span>
@@ -331,40 +350,181 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
                     </span>
                   </a>
                 </div>
-                <div class="ad-details-slider-group">
-                  <div class="ad-details-slider slider-arrow">
-                    <div>
-                      <img src="images/product/01.jpg" alt="details" />
+                {/* slider  */}
+                {/* slider  */}
+                {/* slider  */}
+                <Slider {...settings}>
+                  <div className="feature-card">
+                    <a href="#!" className="feature-img">
+                      <img src={product2} alt="feature" />
+                    </a>
+                    <div className="cross-inline-badge feature-badge">
+                      <span>featured</span>
+                      <i className="fas fa-book-open"></i>
                     </div>
-                    <div>
-                      <img src="images/product/01.jpg" alt="details" />
+                    <button type="button" className="feature-wish">
+                      <i className="fas fa-heart"></i>
+                    </button>
+                    <div className="feature-content">
+                      <ol className="breadcrumb feature-category">
+                        <li>
+                          <span className="flat-badge rent">rent</span>
+                        </li>
+                        <li className="breadcrumb-item">
+                          <a href="#!">automobile</a>
+                        </li>
+                        <li
+                          className="breadcrumb-item active"
+                          aria-current="page"
+                        >
+                          private car
+                        </li>
+                      </ol>
+                      <h3 className="feature-title">
+                        <a href="ad-details-left.html">
+                          Unde eveniet ducimus nostrum maiores soluta temporibus
+                          ipsum dolor sit amet.
+                        </a>
+                      </h3>
+                      <div className="feature-meta">
+                        <span className="feature-price">
+                          $1200<small>/Monthly</small>
+                        </span>
+                        <span className="feature-time">
+                          <i className="fas fa-clock"></i>56 minute ago
+                        </span>
+                      </div>
                     </div>
-                    <div>
-                      <img src="images/product/01.jpg" alt="details" />
+                  </div>
+                  <div className="feature-card">
+                    <a href="#!" className="feature-img">
+                      <img src={product1} alt="feature" />
+                    </a>
+                    <div className="cross-inline-badge feature-badge">
+                      <span>featured</span>
+                      <i className="fas fa-book-open"></i>
                     </div>
-                    <div>
-                      <img src="images/product/01.jpg" alt="details" />
+                    <button type="button" className="feature-wish">
+                      <i className="fas fa-heart"></i>
+                    </button>
+                    <div className="feature-content">
+                      <ol className="breadcrumb feature-category">
+                        <li>
+                          <span className="flat-badge booking">booking</span>
+                        </li>
+                        <li className="breadcrumb-item">
+                          <a href="#!">Property</a>
+                        </li>
+                        <li
+                          className="breadcrumb-item active"
+                          aria-current="page"
+                        >
+                          House
+                        </li>
+                      </ol>
+                      <h3 className="feature-title">
+                        <a href="ad-details-left.html">
+                          Unde eveniet ducimus nostrum maiores soluta temporibus
+                          ipsum dolor sit amet.
+                        </a>
+                      </h3>
+                      <div className="feature-meta">
+                        <span className="feature-price">
+                          $800<small>/perday</small>
+                        </span>
+                        <span className="feature-time">
+                          <i className="fas fa-clock"></i>56 minute ago
+                        </span>
+                      </div>
                     </div>
                   </div>
-                  <div class="cross-vertical-badge ad-details-badge">
-                    <i class="fas fa-clipboard-check"></i>
-                    <span>recommend</span>
+                  <div className="feature-card">
+                    <a href="#!" className="feature-img">
+                      <img src={product3} alt="feature" />
+                    </a>
+                    <div className="cross-inline-badge feature-badge">
+                      <span>featured</span>
+                      <i className="fas fa-book-open"></i>
+                    </div>
+                    <button type="button" className="feature-wish">
+                      <i className="fas fa-heart"></i>
+                    </button>
+                    <div className="feature-content">
+                      <ol className="breadcrumb feature-category">
+                        <li>
+                          <span className="flat-badge sale">sale</span>
+                        </li>
+                        <li className="breadcrumb-item">
+                          <a href="#!">gadget</a>
+                        </li>
+                        <li
+                          className="breadcrumb-item active"
+                          aria-current="page"
+                        >
+                          iphone
+                        </li>
+                      </ol>
+                      <h3 className="feature-title">
+                        <a href="ad-details-left.html">
+                          Unde eveniet ducimus nostrum maiores soluta temporibus
+                          ipsum dolor sit amet.
+                        </a>
+                      </h3>
+                      <div className="feature-meta">
+                        <span className="feature-price">
+                          $1150<small>/Negotiable</small>
+                        </span>
+                        <span className="feature-time">
+                          <i className="fas fa-clock"></i>56 minute ago
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="ad-thumb-slider">
-                  <div>
-                    <img src="images/product/01.jpg" alt="details" />
+                  <div className="feature-card">
+                    <a href="#!" className="feature-img">
+                      <img src={product4} alt="feature" />
+                    </a>
+                    <div className="cross-inline-badge feature-badge">
+                      <span>featured</span>
+                      <i className="fas fa-book-open"></i>
+                    </div>
+                    <button type="button" className="feature-wish">
+                      <i className="fas fa-heart"></i>
+                    </button>
+                    <div className="feature-content">
+                      <ol className="breadcrumb feature-category">
+                        <li>
+                          <span className="flat-badge sale">sale</span>
+                        </li>
+                        <li className="breadcrumb-item">
+                          <a href="#!">automobile</a>
+                        </li>
+                        <li
+                          className="breadcrumb-item active"
+                          aria-current="page"
+                        >
+                          cycle
+                        </li>
+                      </ol>
+                      <h3 className="feature-title">
+                        <a href="ad-details-left.html">
+                          Unde eveniet ducimus nostrum maiores soluta temporibus
+                          ipsum dolor sit amet.
+                        </a>
+                      </h3>
+                      <div className="feature-meta">
+                        <span className="feature-price">
+                          $455<small>/fixed</small>
+                        </span>
+                        <span className="feature-time">
+                          <i className="fas fa-clock"></i>56 minute ago
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <img src="images/product/01.jpg" alt="details" />
-                  </div>
-                  <div>
-                    <img src="images/product/01.jpg" alt="details" />
-                  </div>
-                  <div>
-                    <img src="images/product/01.jpg" alt="details" />
-                  </div>
-                </div>
+                </Slider>
+                {/* =============================== */}
+                {/* End of slider  */}
                 <div class="ad-details-action">
                   <button type="button" class="wish">
                     <i class="fas fa-heart"></i>bookmark
@@ -453,7 +613,10 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
                         <div class="review-head">
                           <div class="review-profile">
                             <a href="#" class="review-avatar">
-                              <img src="images/avatar/03.jpg" alt="review" />
+                              <img
+                                src="../../images/avatar/03.jpg"
+                                alt="review"
+                              />
                             </a>
                             <div class="review-meta">
                               <h6>
@@ -495,7 +658,10 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
                         <div class="review-head">
                           <div class="review-profile">
                             <a href="#" class="review-avatar">
-                              <img src="images/avatar/02.jpg" alt="review" />
+                              <img
+                                src="../../images/avatar/02.jpg"
+                                alt="review"
+                              />
                             </a>
                             <div class="review-meta">
                               <h6>
@@ -535,7 +701,10 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
                         <div class="review-head">
                           <div class="review-profile">
                             <a href="#" class="review-avatar">
-                              <img src="images/avatar/04.jpg" alt="review" />
+                              <img
+                                src="../../images/avatar/04.jpg"
+                                alt="review"
+                              />
                             </a>
                             <div class="review-meta">
                               <h6>
