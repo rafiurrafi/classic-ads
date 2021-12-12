@@ -10,6 +10,7 @@ import AdListPage from "./components/pages/adListPage";
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.css";
 import SingleAdsPage from "./components/pages/singleAdsPage";
+import SellerDashboardPage from "./components/dashboard/sellerDashboardPage";
 function App() {
   const [isOpenAside, setIsOpenAside] = useToggle(false);
   useEffect(() => {
@@ -47,6 +48,16 @@ function App() {
           )}
         />
         {/* <Route path="/" component={AdListPage} /> */}
+        {/* Dashboard  */}
+        <Route
+          path="/seller/:id"
+          render={() => (
+            <SellerDashboardPage
+              isOpenAside={isOpenAside}
+              onOpenAside={setIsOpenAside}
+            />
+          )}
+        />
         <Route
           path="/"
           render={() => (

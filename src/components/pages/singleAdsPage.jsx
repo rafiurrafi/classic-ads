@@ -202,7 +202,7 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
                 <div class="ad-details-feature slider-arrow">
                   <Slider {...singleSettings}>
                     <div class="feature-card">
-                      <a href="#" class="feature-img">
+                      <a href="#!" class="feature-img">
                         <img src="../../images/product/10.jpg" alt="feature" />
                       </a>
                       <div class="cross-inline-badge feature-badge">
@@ -218,7 +218,7 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
                             <span class="flat-badge rent">rent</span>
                           </li>
                           <li class="breadcrumb-item">
-                            <a href="#">automobile</a>
+                            <a href="#!">automobile</a>
                           </li>
                           <li
                             class="breadcrumb-item active"
@@ -244,7 +244,7 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
                       </div>
                     </div>
                     <div class="feature-card">
-                      <a href="#" class="feature-img">
+                      <a href="#!" class="feature-img">
                         <img src="../../images/product/01.jpg" alt="feature" />
                       </a>
                       <div class="cross-inline-badge feature-badge">
@@ -260,7 +260,7 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
                             <span class="flat-badge booking">booking</span>
                           </li>
                           <li class="breadcrumb-item">
-                            <a href="#">Property</a>
+                            <a href="#!">Property</a>
                           </li>
                           <li
                             class="breadcrumb-item active"
@@ -286,7 +286,7 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
                       </div>
                     </div>
                     <div class="feature-card">
-                      <a href="#" class="feature-img">
+                      <a href="#!" class="feature-img">
                         <img src="../../images/product/08.jpg" alt="feature" />
                       </a>
                       <div class="cross-inline-badge feature-badge">
@@ -302,7 +302,7 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
                             <span class="flat-badge sale">sale</span>
                           </li>
                           <li class="breadcrumb-item">
-                            <a href="#">gadget</a>
+                            <a href="#!">gadget</a>
                           </li>
                           <li
                             class="breadcrumb-item active"
@@ -339,7 +339,7 @@ const SingleAdsPage = ({ isOpenAside, onOpenAside }) => {
                     <span class="flat-badge sale">for sale</span>
                   </li>
                   <li class="breadcrumb-item">
-                    <a href="#">Property</a>
+                    <a href="#!">Property</a>
                   </li>
                   <li class="breadcrumb-item active" aria-current="page">
                     house
