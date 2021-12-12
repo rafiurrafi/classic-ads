@@ -6,7 +6,7 @@ export const userService = [
       city: "Los angeles",
       country: "Bangladesh",
     },
-    img: "images/avatar/01.jpg",
+    img: "/images/avatar/01.jpg",
     ads: [1, 2, 3],
     followers: [1, 2, 3],
     following: [1, 2, 3],

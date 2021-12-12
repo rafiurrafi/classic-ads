@@ -51,10 +51,11 @@ function App() {
         {/* Dashboard  */}
         <Route
           path="/seller/:id"
-          render={() => (
+          render={(props) => (
             <SellerDashboardPage
               isOpenAside={isOpenAside}
               onOpenAside={setIsOpenAside}
+              {...props}
             />
           )}
         />
