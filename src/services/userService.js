@@ -10,5 +10,7 @@ export const userService = [
     ads: [1, 2, 3],
     followers: [1, 2, 3],
     following: [1, 2, 3],
+    joinedDate: "february 02, 2021",
+    bio: " Corporis dolore libero temporibus minus tempora quia voluptas nesciunt.",
   },
 ];
