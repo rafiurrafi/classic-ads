@@ -17,6 +17,7 @@ export const productService = [
     time: "40",
     priceType: "spotlight",
     locationArea: { location: "Dhaka", city: "Banani" },
+    seller: { _id: 1 },
   },
   {
     _id: 2,
