@@ -56,8 +56,8 @@ const ProfileOverview = ({ user }) => {
                 </div>
               </div>
             </div>
-            <ProfileOverviewMenu />
           </div>
+          <ProfileOverviewMenu />
         </div>
       </div>
     </section>
