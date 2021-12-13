@@ -3,6 +3,8 @@ export const userService = [
     _id: 1,
     name: "Mohammad Ali",
     address: {
+      mail: "gackon@gmail.com",
+      phoneNumber: "+(880) 1812132311",
       city: "Los angeles",
       country: "Bangladesh",
     },

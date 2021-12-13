@@ -50,7 +50,7 @@ function App() {
         {/* <Route path="/" component={AdListPage} /> */}
         {/* Dashboard  */}
         <Route
-          path="/seller/:id"
+          path="/seller"
           render={(props) => (
             <SellerDashboardPage
               isOpenAside={isOpenAside}
