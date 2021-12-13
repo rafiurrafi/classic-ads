@@ -9,6 +9,11 @@ import SellerDashboard from "./common/sellerDashboard";
 import { Route, Switch } from "react-router-dom";
 import SellerProfile from "./common/sellerProfile";
 import SellerAdsPost from "./common/sellerAdsPost";
+import SellerMyAds from "./common/sellerMyAds";
+import SellerSettings from "./common/sellerSettings";
+import SellerBookmarks from "./common/sellerBookmarks";
+import SellerMessage from "./common/sellerMessage";
+import SellerNotification from "./common/sellerNotification";
 //seller/:id
 const SellerDashboardPage = ({ isOpenAside, onOpenAside, match }) => {
   const user = userService[0];
@@ -33,24 +38,24 @@ const SellerDashboardPage = ({ isOpenAside, onOpenAside, match }) => {
           render={(props) => <SellerAdsPost {...props} />}
         />
         <Route
-          path="/seller/my-post"
-          render={(props) => <SellerAdsPost {...props} />}
+          path="/seller/my-ads"
+          render={(props) => <SellerMyAds {...props} />}
         />
         <Route
           path="/seller/settings"
-          render={(props) => <SellerAdsPost {...props} />}
+          render={(props) => <SellerSettings {...props} />}
         />
         <Route
           path="/seller/bookmarks"
-          render={(props) => <SellerAdsPost {...props} />}
+          render={(props) => <SellerBookmarks {...props} />}
         />
         <Route
           path="/seller/message"
-          render={(props) => <SellerAdsPost {...props} />}
+          render={(props) => <SellerMessage {...props} />}
         />
         <Route
           path="/seller/notification"
-          render={(props) => <SellerAdsPost {...props} />}
+          render={(props) => <SellerNotification {...props} />}
         />
         <Route
           path="/seller/logout"

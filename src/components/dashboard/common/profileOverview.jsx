@@ -13,13 +13,13 @@ const ProfileOverview = ({ user }) => {
             <div class="col-lg-5">
               <div class="dash-header-left">
                 <div class="dash-avatar">
-                  <a href="#">
+                  <a href="#!">
                     <img src={img} alt="avatar" />
                   </a>
                 </div>
                 <div class="dash-intro">
                   <h4 className="mb-2">
-                    <a href="#">{name}</a>
+                    <a href="#!">{name}</a>
                   </h4>
                   <ul class="dash-meta">
                     <li className="d-flex">
