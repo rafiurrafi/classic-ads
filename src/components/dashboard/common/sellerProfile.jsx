@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../../../styles/seller/sellerProfile.scss";
 
 const SellerProfile = () => {
   return (
@@ -10,7 +11,7 @@ const SellerProfile = () => {
             <div class="account-card">
               <div class="account-title">
                 <h3>Membership</h3>
-                <Link to="/seller/settings">Edite</Link>
+                <Link to="/seller/settings">Edit</Link>
               </div>
               <ul class="account-card-list">
                 <li>
@@ -34,7 +35,7 @@ const SellerProfile = () => {
             <div class="account-card">
               <div class="account-title">
                 <h3>Contact Info</h3>
-                <a href="/seller/settings">Edite</a>
+                <a href="/seller/settings">Edit</a>
               </div>
               <ul class="account-card-list">
                 <li>
@@ -60,7 +61,7 @@ const SellerProfile = () => {
             <div class="account-card">
               <div class="account-title">
                 <h3>Billing Address</h3>
-                <a href="/seller/settings">Edite</a>
+                <a href="/seller/settings">Edit</a>
               </div>
               <ul class="account-card-list">
                 <li>
@@ -84,7 +85,7 @@ const SellerProfile = () => {
             <div class="account-card">
               <div class="account-title">
                 <h3>Shipping Address</h3>
-                <a href="/seller/settings">Edite</a>
+                <a href="/seller/settings">Edit</a>
               </div>
               <ul class="account-card-list">
                 <li>

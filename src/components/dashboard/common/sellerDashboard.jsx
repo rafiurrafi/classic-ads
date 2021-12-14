@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../../../styles/sellerDashboard.scss";
 const SellerDashboard = () => {
   return (
     <section class="dashboard-part">

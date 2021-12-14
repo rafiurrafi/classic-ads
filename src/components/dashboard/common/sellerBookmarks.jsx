@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../styles/seller/sellerBookmark.scss";
 
 const SellerBookmarks = () => {
   return (

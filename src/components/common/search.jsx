@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import $ from "jquery";
+import { FaSearch } from "react-icons/fa";
 const Search = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
@@ -10,7 +11,9 @@ const Search = () => {
     <form className="header-form">
       <div className={`header-search ${isOpen && "active"}`}>
         <button type="submit" title="Search Submit ">
-          <i className="fas fa-search"></i>
+          <i>
+            <FaSearch />
+          </i>
         </button>
         <input type="text" placeholder="Search, Whatever you needs..." />
         <button

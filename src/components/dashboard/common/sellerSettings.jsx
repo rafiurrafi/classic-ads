@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../styles/seller/sellerSetting.scss";
 
 const SellerSettings = () => {
   return (

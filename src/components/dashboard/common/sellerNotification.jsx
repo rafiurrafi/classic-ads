@@ -1,5 +1,6 @@
 import React from "react";
-
+import "../../../styles/seller/sellerNotification.scss";
+import * as Fa from "react-icons/fa";
 const SellerNotification = () => {
   return (
     <section class="notify-part">
@@ -14,24 +15,22 @@ const SellerNotification = () => {
                   <option value="">unread notification</option>
                 </select>
                 <div class="notify-action">
-                  <a href="#" title="Delete All" class="fas fa-trash-alt"></a>
-                  <a
-                    href="#"
-                    title="Mark All As Read"
-                    class="fas fa-envelope-open"
-                  ></a>
-                  <a
-                    href="#"
-                    title="Notification Setting"
-                    class="fas fa-cog"
-                  ></a>
+                  <a href="#" title="Delete All">
+                    <Fa.FaTrashAlt />
+                  </a>
+                  <a href="#" title="Mark All As Read">
+                    <Fa.FaEnvelopeOpen />
+                  </a>
+                  <a href="#" title="Notification Setting">
+                    <Fa.FaCog />
+                  </a>
                 </div>
               </div>
               <ul class="notify-list notify-scroll">
                 <li class="notify-item active">
                   <a href="#" class="notify-link">
                     <div class="notify-img">
-                      <img src="images/avatar/01.jpg" alt="avatar" />
+                      <img src="../../../images/avatar/01.jpg" alt="avatar" />
                     </div>
                     <div class="notify-content">
                       <p class="notify-text">
@@ -45,7 +44,7 @@ const SellerNotification = () => {
                 <li class="notify-item">
                   <a href="#" class="notify-link">
                     <div class="notify-img">
-                      <img src="images/avatar/02.jpg" alt="avatar" />
+                      <img src="../../../images/avatar/02.jpg" alt="avatar" />
                     </div>
                     <div class="notify-content">
                       <p class="notify-text">
@@ -59,7 +58,7 @@ const SellerNotification = () => {
                 <li class="notify-item">
                   <a href="#" class="notify-link">
                     <div class="notify-img">
-                      <img src="images/avatar/03.jpg" alt="avatar" />
+                      <img src="../../../images/avatar/03.jpg" alt="avatar" />
                     </div>
                     <div class="notify-content">
                       <p class="notify-text">
@@ -73,7 +72,7 @@ const SellerNotification = () => {
                 <li class="notify-item">
                   <a href="#" class="notify-link">
                     <div class="notify-img">
-                      <img src="images/avatar/02.jpg" alt="avatar" />
+                      <img src="../../../images/avatar/02.jpg" alt="avatar" />
                     </div>
                     <div class="notify-content">
                       <p class="notify-text">
@@ -87,7 +86,7 @@ const SellerNotification = () => {
                 <li class="notify-item">
                   <a href="#" class="notify-link">
                     <div class="notify-img">
-                      <img src="images/avatar/04.jpg" alt="avatar" />
+                      <img src="../../../images/avatar/04.jpg" alt="avatar" />
                     </div>
                     <div class="notify-content">
                       <p class="notify-text">
@@ -101,7 +100,7 @@ const SellerNotification = () => {
                 <li class="notify-item">
                   <a href="#" class="notify-link">
                     <div class="notify-img">
-                      <img src="images/avatar/01.jpg" alt="avatar" />
+                      <img src="../../../images/avatar/01.jpg" alt="avatar" />
                     </div>
                     <div class="notify-content">
                       <p class="notify-text">

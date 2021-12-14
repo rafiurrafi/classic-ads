@@ -29,7 +29,7 @@ function Header(props) {
               <span>join me</span>
             </a>
             <button type="button" className="header-widget search-btn">
-              <i className="fas fa-search"></i>
+              <Fa.FaSearch />
             </button>
           </div>
           <Search />
@@ -37,14 +37,18 @@ function Header(props) {
             <ul className="header-list">
               <li className="header-item">
                 <a href="bookmark.html" className="header-widget">
-                  <i className="fas fa-heart"></i>
+                  <i>
+                    <Fa.FaHeart />
+                  </i>
                   <sup>0</sup>
                 </a>
               </li>
               <DropdownMessage />
               <li className="header-item">
                 <button type="button" className="header-widget">
-                  <i className="fas fa-bell"></i>
+                  <i>
+                    <Fa.FaBell />
+                  </i>
                   <sup>0</sup>
                 </button>
                 <div className="dropdown-card">

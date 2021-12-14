@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../../../styles/seller/sellerMessage.scss";
 const SellerMessage = () => {
   return (
     <section class="message-part">

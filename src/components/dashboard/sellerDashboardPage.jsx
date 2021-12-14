@@ -1,5 +1,4 @@
 import React from "react";
-import "../../styles/sellerDashboard.scss";
 import SidebarProfile from "../sidebarProfile";
 import MobileNav from "../common/mobileNav";
 import SingleBanner from "../common/singleBanner";

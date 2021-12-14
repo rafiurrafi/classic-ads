@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../../../styles/seller/sellerMyAds.scss";
 const SellerMyAds = () => {
   return (
     <section class="myads-part mt-4">

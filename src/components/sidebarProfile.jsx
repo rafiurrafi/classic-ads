@@ -1,4 +1,5 @@
 import React from "react";
+import * as Fa from "react-icons/fa";
 
 const SidebarProfile = ({ isOpenAside, onOpenAside }) => {
   return (
@@ -6,16 +7,16 @@ const SidebarProfile = ({ isOpenAside, onOpenAside }) => {
       <div className="sidebar-body">
         <div className="sidebar-header">
           <a href="index.html" className="sidebar-logo">
-            <img src="images/logo.png" alt="logo" />
+            <img src="../images/logo.png" alt="logo" />
           </a>
           <button className="sidebar-cross" onClick={onOpenAside}>
-            <i className="fas fa-times"></i>
+            <Fa.FaTimes />
           </button>
         </div>
         <div className="sidebar-content">
           <div className="sidebar-profile">
             <a href="#!" className="sidebar-avatar">
-              <img src="images/avatar/01.jpg" alt="avatar" />
+              <img src="../images/avatar/01.jpg" alt="avatar" />
             </a>
             <h4>
               <a href="#!" className="sidebar-name">
@@ -23,7 +24,7 @@ const SidebarProfile = ({ isOpenAside, onOpenAside }) => {
               </a>
             </h4>
             <a href="ad-post.html" className="btn btn-inline sidebar-post">
-              <i className="fas fa-plus-circle"></i>
+              <Fa.FaPlusCircle />
               <span>post your ad</span>
             </a>
           </div>
@@ -56,6 +57,7 @@ const SidebarProfile = ({ isOpenAside, onOpenAside }) => {
                   <a className="navbar-link" href="#!">
                     <span>Categories</span>
                     <i className="fas fa-plus"></i>
+                    <Fa.FaPlus />
                   </a>
                   <ul className="dropdown-list">
                     <li>
@@ -73,7 +75,7 @@ const SidebarProfile = ({ isOpenAside, onOpenAside }) => {
                 <li className="navbar-item navbar-dropdown">
                   <a className="navbar-link" href="#!">
                     <span>Advertise List</span>
-                    <i className="fas fa-plus"></i>
+                    <Fa.FaPlus />
                   </a>
                   <ul className="dropdown-list">
                     <li>
@@ -96,7 +98,7 @@ const SidebarProfile = ({ isOpenAside, onOpenAside }) => {
                 <li className="navbar-item navbar-dropdown">
                   <a className="navbar-link" href="#!">
                     <span>Advertise details</span>
-                    <i className="fas fa-plus"></i>
+                    <Fa.FaPlus />
                   </a>
                   <ul className="dropdown-list">
                     <li>
@@ -119,7 +121,7 @@ const SidebarProfile = ({ isOpenAside, onOpenAside }) => {
                 <li className="navbar-item navbar-dropdown">
                   <a className="navbar-link" href="#!">
                     <span>Pages</span>
-                    <i className="fas fa-plus"></i>
+                    <Fa.FaPlus />
                   </a>
                   <ul className="dropdown-list">
                     <li>
