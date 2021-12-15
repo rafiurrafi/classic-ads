@@ -148,13 +148,13 @@ textarea::placeholder {
 }
 
 button {
-  border: none;
-  outline: none;
+  border: none !important;
+  outline: none !important;
   background: none;
 }
 
 button:focus {
-  outline: none;
+  outline: none !important;
 }
 
 .center-50 {
@@ -3353,6 +3353,14 @@ textarea.form-control {
 
 .sidebar-footer p a:hover {
   text-decoration: underline;
+}
+.sidebar-menu {
+  .nav {
+    flex-wrap: nowrap;
+  }
+  .nav-link.active {
+    border-color: var(--primary) !important;
+  }
 }
 
 @media (max-width: 1199px) {
