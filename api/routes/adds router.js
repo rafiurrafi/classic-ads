@@ -7,7 +7,25 @@ const Sequelize = require ('sequelize')
 
 const Op = Sequelize.Op
 
-// create
+//create a post
+
+router.post("/", async (req, res) => {
+
+  const newAds = new Ads(req.body);
+
+  try {
+
+    const savedAds = await newAds.save();
+
+    res.status(200).json(savedAds);
+
+  } catch (err) {
+
+    res.status(500).json(err);
+
+  }
+
+});
 // getbyId
 // Search adds
 
