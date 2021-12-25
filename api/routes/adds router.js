@@ -1,13 +1,18 @@
-// create
-// getbyId
-// Search adds
 const express = require('express');
 
 const router = express.Router();
 const Ads = require('../models/Ads');
+
 const Sequelize = require ('sequelize')
 
 const Op = Sequelize.Op
+
+// create
+// getbyId
+// Search adds
+
+
+
 
 router.get('/search',(req,res) =>{
 
