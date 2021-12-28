@@ -62,21 +62,13 @@ Res.status(200).json(result) })
 })
 
 router.get('/search',(req,res) =>{
-
 let {term }=req.query
-
 term = term.toLowerCase();
-
 Ads.findAll({where : {
-
 city: {[Op.likes]: '%'+ term +'%' }} 
-
 })
-
 .then( ads => res.render ('ads',{ads})
-
 .catch (err => console.log(err))
-
 });
 
 
