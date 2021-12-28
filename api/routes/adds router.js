@@ -55,9 +55,11 @@ router.put("/:id", async (req, res) => {
 });
 // getbyId
 // Search adds
-
-
-
+router.get('/search/:name',(req,res) =>{
+let regex = new RegExp(req.params.name, 'i');
+Ads.find({name:regex}).then((result) => {
+Res.status(200).json(result) }) 
+})
 
 router.get('/search',(req,res) =>{
 
