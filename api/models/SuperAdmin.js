@@ -5,29 +5,18 @@ const bcrypt = require('bcrypt')
 const superAdminSchema = new Schema({
 
     firstName:String,
-
     firstName:String,
-
     userName:String,
-
     userType:{ type:String, default:"SuperAdmin"},
-
     isDeleted:{ type:Boolean, default:false},
-
     email:{ type:String, unique:true },
-
     password: { String , default :"" },
-
     profileImage: String,
-
     resetLink : { String , default :"" },
-
     address:{ division : String, destrict : String, upozila : String, 
-
-              zipcode : String,  area : String },
+             zipcode : String,  area : String },
 
         
-
 })
 
 adminSchema.pre('save', function(next){

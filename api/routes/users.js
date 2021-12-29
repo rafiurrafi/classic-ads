@@ -26,7 +26,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-//delete user
+//delete user permanent
 router.delete("/:id", async (req, res) => {
   if (req.body.userId === req.params.id || req.body.isAdmin) {
     try {
