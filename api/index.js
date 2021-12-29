@@ -51,6 +51,7 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
+app.use("/api/ads", require("./routes/adsRouter"));
 
 app.get('/', (req, res) => {
   res.send(`<h1> I am from root </h1>`)
