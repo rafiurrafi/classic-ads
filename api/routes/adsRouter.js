@@ -1,13 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const Ads = require('../models/Ads');
-const Sequelize = require ('sequelize')
-const Op = Sequelize.Op
 
 //create a ads //maximum 5 ads for free
 router.post("/", async (req, res) => {
+try {
+const { userType} = req.body
   const newAds = new Ads(req.body);
-  try {
+if(userType === "admin" || userType === ""){    //admin login controller
+ const isValidUser = await Admin.findOne(
+       {
+        $and: [ { userId }, { "isDeleted": false }]
+            }
+       ) //find the user
+    if(isValidUser){
 if(User.usertype === null && Ads.length <= 5){
     const savedAds = await newAds.save();
     res.status(200).json(savedAds);
