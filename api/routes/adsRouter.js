@@ -1,23 +1,40 @@
 const express = require('express');
 const router = express.Router();
 const Ads = require('../models/Ads');
+const User = require('../models/User');
+
+// get users own ads
+router.get("/profile/:username", async (req, res) => {
+  try {
+    const user = await User.findOne({ username: req.params.username });
+    const ads = await Ads.find({ userId: user._id });
+    res.status(200).json(ads);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 //create a ads //maximum 5 ads for free
 router.post("/", async (req, res) => {
 try {
 const { userType} = req.body
+const user = await User.findOne({ username: req.params.username });
+    const ads = await Ads.find({ userId: user._id });
+    
+
   const newAds = new Ads(req.body);
-if(userType === "admin" || userType === ""){    //admin login controller
- const isValidUser = await Admin.findOne(
+if(userType === "admin"){    //admin login controller
+ let isValidUser = await Admin.findOne(
        {
         $and: [ { userId }, { "isDeleted": false }]
             }
-       ) //find the user
+       ) //find the admin
+}else{
     if(isValidUser){
 if(User.usertype === null && Ads.length <= 5){
     const savedAds = await newAds.save();
     res.status(200).json(savedAds);
-}elseif(User.usertype === null && Ads.length <= 5){
+}else if(Ads.length <= 5){
     const savedAds = await newAds.save();
     res.status(200).json(savedAds);
 }else{
