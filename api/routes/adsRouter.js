@@ -4,16 +4,20 @@ const Ads = require('../models/Ads');
 const Sequelize = require ('sequelize')
 const Op = Sequelize.Op
 
-//create a post
+//create a ads //maximum 5 ads for free
 router.post("/", async (req, res) => {
   const newAds = new Ads(req.body);
   try {
+if(Ads.length <= 5){
     const savedAds = await newAds.save();
     res.status(200).json(savedAds);
+}else{
+res.status(200).json("you reached maximum limit of free ads");
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 //update a post
 router.put("/:id", async (req, res) => {
   try {
@@ -39,15 +43,15 @@ res.status(200).json(result) })
 })
 
 // Search ads2
-router.get('/search',(req,res) =>{
-let {term }=req.query
-term = term.toLowerCase();
-Ads.findAll({where : {
-city: {[Op.likes]: '%'+ term +'%' }} 
-})
-.then( ads => res.render ('ads',{ads}))
-.catch (err => console.log(err))
-});
+//router.get('/search',(req,res) =>{
+//let {term }=req.query
+//term = term.toLowerCase();
+//Ads.findAll({where : {
+//city: {[Op.likes]: '%'+ term +'%' }} 
+//})
+//.then( ads => res.render ('ads',{ads}))
+//.catch (err => console.log(err))
+//});
 
 //get user own all ads 
 
