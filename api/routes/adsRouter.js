@@ -8,7 +8,10 @@ const Op = Sequelize.Op
 router.post("/", async (req, res) => {
   const newAds = new Ads(req.body);
   try {
-if(Ads.length <= 5){
+if(User.usertype === null && Ads.length <= 5){
+    const savedAds = await newAds.save();
+    res.status(200).json(savedAds);
+}elseif(User.usertype === null && Ads.length <= 5){
     const savedAds = await newAds.save();
     res.status(200).json(savedAds);
 }else{
