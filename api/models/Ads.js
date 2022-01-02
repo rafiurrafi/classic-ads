@@ -9,12 +9,12 @@ const addsSchema = new Schema(
     price:{ type: String, required: true},
     location: { type: String, required: true },
     desc: { type: String, required: true },
-    priceType: {
+    adsType: {
       type: String, 
-      enum: ["free","spotlight","ggggg"] },
+      enum: ["free","spotlight","featured"] },
     productSize:[{ type:String, required:true }],
     productImg: [{ img:String }],
-    locationArea: { 
+    area: { 
           location:String, 
           city:String 
         },
