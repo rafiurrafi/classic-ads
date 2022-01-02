@@ -25,6 +25,8 @@ const addsSchema = new Schema(
     isWishList:{ type: Boolean, default:false },
     category:String,
     subCategory: String,
+    brand:String,
+    condition:String, // old,new
     seller: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
     updatedAt: Date,
   },
