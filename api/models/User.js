@@ -48,9 +48,9 @@ const UserSchema = new mongoose.Schema(
       type: String,
       max: 50,
     },
-    from: {
-      type: String,
-      max: 50,
+    ads: {
+    },
+    post: {
     },
     relationship: {
       type: Number,

@@ -18,7 +18,6 @@ const addsSchema = new Schema(
           location:String, 
           city:String 
         },
-
     isDeleted:{ type: Boolean, default:false },
     isPanding:{ type: Boolean, default: true },
     isDeclined:{ type: Boolean, default:false },
@@ -27,8 +26,7 @@ const addsSchema = new Schema(
     subCategory: String,
     brand:String,
     condition:String, // old,new
-    seller: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    updatedAt: Date,
+    seller: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }
   },
 
   { timestamps: true }
