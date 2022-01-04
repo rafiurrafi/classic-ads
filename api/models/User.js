@@ -1,13 +1,15 @@
 const mongoose = require("mongoose");
+const Posts = require("./Posts");
+const Ads = require("./Ads");
 
 const UserSchema = new mongoose.Schema(
   {
-    username: {
+    name: {
       type: String,
       require: true,
       min: 3,
       max: 20,
-      unique: true,
+     
     },
     email: {
       type: String,
@@ -48,10 +50,18 @@ const UserSchema = new mongoose.Schema(
       type: String,
       max: 50,
     },
-    ads: {
-    },
-    post: {
-    },
+    ads:[
+        {
+          type:mongoose.Types.ObjectId,
+          ref:"Ads"
+         }
+    ],
+    post: [
+        {
+          type:mongoose.Types.ObjectId,
+          ref:"Posts"
+         }
+    ],
     relationship: {
       type: Number,
       enum: [1, 2, 3],
