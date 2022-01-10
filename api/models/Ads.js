@@ -11,7 +11,8 @@ const addsSchema = new Schema(
     desc: { type: String, required: true },
     adsType: {
       type: String, 
-      enum: ["free","spotlight","featured"] },
+      enum: ["free","spotlight","featured"] 
+      },
     productSize:[{ type:String, required:true }],
     productImg: [{ img:String }],
     area: { 
