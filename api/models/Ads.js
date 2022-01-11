@@ -31,7 +31,7 @@ const addsSchema = new Schema(
     category:String,
     subCategory: String,
     brand:String,
-    condition:String, // old,new
+    condition:String, // used,new
     seller: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }
   },
 
