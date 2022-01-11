@@ -19,6 +19,7 @@ const addsSchema = new Schema(
       },
     productSize:[{ type:String, required:true }],
     productImg: [{ img:String }],
+    productTags: [{ tag:String }],
     area: { 
           location:String, 
           city:String 
