@@ -13,6 +13,10 @@ const addsSchema = new Schema(
       type: String, 
       enum: ["free","spotlight","featured"] 
       },
+    authenticity: {
+      type: String, 
+      enum: ["original","refurbished"] 
+      },
     productSize:[{ type:String, required:true }],
     productImg: [{ img:String }],
     area: { 
